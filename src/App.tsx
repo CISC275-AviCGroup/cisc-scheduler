@@ -7,6 +7,7 @@ function App(): JSX.Element {
             <header className="App-header">CISC 275 Final Project</header>
             <h3>Team Members:</h3>
             <p>Avinash Chouhan</p>
+            <p>Suhas Bolledula</p>
         </div>
     );
 }
