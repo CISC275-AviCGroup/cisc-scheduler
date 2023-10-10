@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (49 ms)
+  ✕ renders the course name somewhere (36 ms)
 
   ● renders the course name somewhere
 
@@ -20,21 +20,10 @@ FAIL src/App.test.tsx
           [36m>[39m
             [0mCISC 275 Final Project[0m
           [36m</header>[39m
-          [36m<p>[39m
-            [0mAvinash Chouhan[0m
-          [36m</p>[39m
-          [36m<p>[39m
-            [0mSuhas Bolledula[0m
-          [36m</p>[39m
-          [36m<p>[39m
-            [0mDon Daniels[0m
-          [36m</p>[39m
-          [36m<p>[39m
-            [0mAlexander Maneri[0m
-          [36m</p>[39m
-          [36m<p>[39m
-            [0mJoseph Peruyero[0m
-          [36m</p>[39m
+          [36m<h3>[39m
+            [0mTeam Members:[0m
+          [36m</h3>[39m
+          [36m<p />[39m
         [36m</div>[39m
       [36m</div>[39m
     [36m</body>[39m
@@ -66,7 +55,7 @@ All files |     100 |      100 |     100 |     100 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.907 s
+Time:        1.619 s
 Ran all test suites.
 Jest did not exit one second after the test run has completed.
 
