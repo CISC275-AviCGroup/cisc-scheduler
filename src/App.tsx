@@ -5,11 +5,8 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">CISC 275 Final Project</header>
-            <p>Avinash Chouhan</p>
-            <p>Suhas Bolledula</p>
-            <p>Don Daniels</p>
-            <p>Alexander Maneri</p>
-            <p>Joseph Peruyero</p>
+            <h3>Team Members:</h3>
+            <p></p>
         </div>
     );
 }
