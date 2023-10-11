@@ -8,6 +8,7 @@ function App(): JSX.Element {
             <h3>Team Members:</h3>
             <p>Avinash Chouhan</p>
             <p>Suhas Bolledula</p>
+            <p>Donavan Daniels </p>
         </div>
     );
 }
