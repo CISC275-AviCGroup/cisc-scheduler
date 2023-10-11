@@ -10,6 +10,7 @@ function App(): JSX.Element {
             <p>Suhas Bolledula</p>
             <p>Donavan Daniels </p>
             <p>Alex Maneri </p>
+            <p>Joseph Peruyero</p>
         </div>
     );
 }
