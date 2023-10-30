@@ -1,16 +1,12 @@
 import React from "react";
 import "./App.css";
+import { CourseEditor } from "./CourseEditor";
 
 function App(): JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">CISC 275 Final Project</header>
-            <h3>Team Members:</h3>
-            <p>Avinash Chouhan</p>
-            <p>Suhas Bolledula</p>
-            <p>Donavan Daniels </p>
-            <p>Alex Maneri </p>
-            <p>Joseph Peruyero</p>
+            <h1>CISC Scheduler</h1>
+            <CourseEditor />
         </div>
     );
 }
