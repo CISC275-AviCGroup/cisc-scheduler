@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (47 ms)
+  ✕ renders the course name somewhere (57 ms)
 
   ● renders the course name somewhere
 
@@ -19,49 +19,102 @@ FAIL src/App.test.tsx
             [0mCISC Scheduler[0m
           [36m</h1>[39m
           [36m<div>[39m
-            [36m<h1>[39m
-              [0mCourse Editor[0m
-            [36m</h1>[39m
-            [36m<form>[39m
-              [36m<input[39m
-                [33mname[39m=[32m"code"[39m
-                [33mplaceholder[39m=[32m"Course code"[39m
-                [33mtype[39m=[32m"text"[39m
-                [33mvalue[39m=[32m""[39m
-              [36m/>[39m
-              [36m<input[39m
-                [33mname[39m=[32m"title"[39m
-                [33mplaceholder[39m=[32m"Course title"[39m
-                [33mtype[39m=[32m"text"[39m
-                [33mvalue[39m=[32m""[39m
-              [36m/>[39m
-              [36m<input[39m
-                [33mname[39m=[32m"credits"[39m
-                [33mplaceholder[39m=[32m"Credits"[39m
-                [33mtype[39m=[32m"number"[39m
-                [33mvalue[39m=[32m"0"[39m
-              [36m/>[39m
-              [36m<button[39m
-                [33mtype[39m=[32m"submit"[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"container"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"row"[39m
               [36m>[39m
-                [0mSubmit[0m
-              [36m</button>[39m
-            [36m</form>[39m
-            [36m<h2>[39m
-              [0mCourse Data[0m
-            [36m</h2>[39m
-            [36m<p>[39m
-              [0mCode: [0m
-              [0m[0m
-            [36m</p>[39m
-            [36m<p>[39m
-              [0mTitle: [0m
-              [0m[0m
-            [36m</p>[39m
-            [36m<p>[39m
-              [0mCredits: [0m
-              [0m0[0m
-            [36m</p>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"col"[39m
+                [36m>[39m
+                  [36m<form[39m
+                    [33mclass[39m=[32m""[39m
+                  [36m>[39m
+                    [36m<div>[39m
+                      [36m<label[39m
+                        [33mclass[39m=[32m"form-label"[39m
+                      [36m>[39m
+                        [0mSemester Title:[0m
+                      [36m</label>[39m
+                      [36m<input[39m
+                        [33mclass[39m=[32m"form-control"[39m
+                        [33mname[39m=[32m"title"[39m
+                        [33mplaceholder[39m=[32m"Semester title"[39m
+                        [33mtype[39m=[32m"text"[39m
+                        [33mvalue[39m=[32m""[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</form>[39m
+                  [36m<div>[39m
+                    [36m<h1>[39m
+                      [0mCourse Editor[0m
+                    [36m</h1>[39m
+                    [36m<form>[39m
+                      [36m<input[39m
+                        [33mname[39m=[32m"code"[39m
+                        [33mplaceholder[39m=[32m"Course code"[39m
+                        [33mtype[39m=[32m"text"[39m
+                        [33mvalue[39m=[32m"0"[39m
+                      [36m/>[39m
+                      [36m<input[39m
+                        [33mname[39m=[32m"title"[39m
+                        [33mplaceholder[39m=[32m"Course title"[39m
+                        [33mtype[39m=[32m"text"[39m
+                        [33mvalue[39m=[32m""[39m
+                      [36m/>[39m
+                      [36m<input[39m
+                        [33mname[39m=[32m"credits"[39m
+                        [33mplaceholder[39m=[32m"Credits"[39m
+                        [33mtype[39m=[32m"number"[39m
+                        [33mvalue[39m=[32m"0"[39m
+                      [36m/>[39m
+                      [36m<button[39m
+                        [33mtype[39m=[32m"submit"[39m
+                      [36m>[39m
+                        [0mSubmit[0m
+                      [36m</button>[39m
+                    [36m</form>[39m
+                    [36m<h2>[39m
+                      [0mCourse Data[0m
+                    [36m</h2>[39m
+                    [36m<p>[39m
+                      [0mCode: [0m
+                      [0m0[0m
+                    [36m</p>[39m
+                    [36m<p>[39m
+                      [0mTitle: [0m
+                      [0m[0m
+                    [36m</p>[39m
+                    [36m<p>[39m
+                      [0mCredits: [0m
+                      [0m0[0m
+                    [36m</p>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"col"[39m
+                [36m>[39m
+                  [36m<h2>[39m
+                    [0mSemester Data[0m
+                  [36m</h2>[39m
+                  [36m<p>[39m
+                    [0mTitle: [0m
+                    [0m[0m
+                  [36m</p>[39m
+                  [36m<p>[39m
+                    [0mCredits: [0m
+                    [0m0[0m
+                  [36m</p>[39m
+                  [36m<h3>[39m
+                    [0mCourses:[0m
+                  [36m</h3>[39m
+                  [36m<ul[39m
+                    [33mclass[39m=[32m"noBulletsUL"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -88,10 +141,13 @@ FAIL src/App.test.tsx
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------|---------|----------|---------|---------|-------------------
-All files          |      50 |      100 |      40 |      50 |                   
- src               |      50 |      100 |      40 |      50 |                   
+All files          |   45.45 |      100 |    37.5 |   45.45 |                   
+ src               |   45.45 |      100 |    37.5 |   45.45 |                   
   App.tsx          |     100 |      100 |     100 |     100 |                   
-  CourseEditor.tsx |   45.45 |      100 |      25 |   45.45 | 12-14,17-18,28    
+  CourseData.tsx   |       0 |      100 |     100 |       0 | 1                 
+  CourseEditor.tsx |   45.45 |      100 |   33.33 |   45.45 | 17-19,22-24       
+  MakeSemester.tsx |   44.44 |      100 |      25 |   44.44 | 16,24-26,55       
+  Plan.tsx         |       0 |        0 |       0 |       0 |                   
  src/interfaces    |       0 |        0 |       0 |       0 |                   
   course.tsx       |       0 |        0 |       0 |       0 |                   
   school_year.tsx  |       0 |        0 |       0 |       0 |                   
@@ -100,7 +156,7 @@ All files          |      50 |      100 |      40 |      50 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.642 s
+Time:        2.388 s
 Ran all test suites.
 Jest did not exit one second after the test run has completed.
 
