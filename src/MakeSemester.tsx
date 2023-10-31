@@ -51,11 +51,13 @@ export function MakeSemester(): JSX.Element {
                         <p>Credits: {semester.tot_creds}</p>
                         <h3>Courses:</h3>
                         <ul className="noBulletsUL">
-                            {semester.courses.map((course, index) => (
-                                <li key={index}>
-                                    {course.code} - {course.title}
-                                </li>
-                            ))}
+                            {semester.courses.map((course, index) => {
+                                return (
+                                    <li key={index}>
+                                        {course.code} - {course.title}
+                                    </li>
+                                );
+                            })}
                         </ul>
                     </Col>
                 </Row>
