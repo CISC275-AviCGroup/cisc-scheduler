@@ -1,5 +1,21 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scheduler h1 {
+    animation: fadeIn 1s ease-in; /* Apply the "fadeIn" animation to the h1 element */
+}
+
 .App {
     text-align: center;
+
 }
 
 .App-logo {
@@ -40,7 +56,4 @@
     to {
         transform: rotate(360deg);
     }
-}
-.noBulletsUL {
-    list-style: none;
 }

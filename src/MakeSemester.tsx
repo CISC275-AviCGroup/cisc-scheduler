@@ -27,7 +27,7 @@ export function MakeSemester(): JSX.Element {
     };
 
     return (
-        <div>
+        <div className="fade-in">
             <Container>
                 <Row>
                     <Col>

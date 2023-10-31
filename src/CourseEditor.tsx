@@ -28,7 +28,7 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
         });
     };
     return (
-        <div>
+        <div className="fade-in">
             <h1>Course Editor</h1>
 
             <form onSubmit={handleSubmit}>
