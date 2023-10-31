@@ -31,7 +31,7 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
         <div>
             <h1>Course Editor</h1>
 
-            <form onClick={() => handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input
                     type="text"
                     name="code"

@@ -3,6 +3,7 @@ import { Semester } from "./interfaces/semester";
 import { CourseEditor } from "./CourseEditor";
 import { Col, Container, Row, Form } from "react-bootstrap";
 import { Course } from "./interfaces/course";
+import "./App.css";
 
 export function MakeSemester(): JSX.Element {
     const [semester, setSemester] = useState<Semester>({
@@ -15,7 +16,7 @@ export function MakeSemester(): JSX.Element {
         setSemester({
             ...semester,
             courses: [...semester.courses, newCourse],
-            tot_creds: semester.tot_creds + newCourse.credits
+            tot_creds: Number(semester.tot_creds) + Number(newCourse.credits)
         });
     };
 
@@ -49,7 +50,7 @@ export function MakeSemester(): JSX.Element {
                         <p>Title: {semester.title}</p>
                         <p>Credits: {semester.tot_creds}</p>
                         <h3>Courses:</h3>
-                        <ul>
+                        <ul className="noBulletsUL">
                             {semester.courses.map((course, index) => (
                                 <li key={index}>
                                     {course.code} - {course.title}

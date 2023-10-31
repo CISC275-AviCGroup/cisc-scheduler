@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import { CourseEditor } from "./CourseEditor";
 import { MakeSemester } from "./MakeSemester";
 
 function App(): JSX.Element {
