@@ -5,7 +5,9 @@ import { CourseEditor } from "./CourseEditor";
 function App(): JSX.Element {
     return (
         <div className="App">
-            <h1>CISC Scheduler</h1>
+            <div className="scheduler">
+                <h1>CISC Scheduler</h1>
+            </div>
             <CourseEditor />
         </div>
     );
