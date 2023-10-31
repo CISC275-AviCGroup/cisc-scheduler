@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { CourseEditor } from "./CourseEditor";
+import { MakeSemester } from "./MakeSemester";
 
 function App(): JSX.Element {
     return (
@@ -8,7 +8,7 @@ function App(): JSX.Element {
             <div className="scheduler">
                 <h1>CISC Scheduler</h1>
             </div>
-            <CourseEditor />
+            <MakeSemester />
         </div>
     );
 }

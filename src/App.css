@@ -41,3 +41,6 @@
         transform: rotate(360deg);
     }
 }
+.noBulletsUL {
+    list-style: none;
+}
