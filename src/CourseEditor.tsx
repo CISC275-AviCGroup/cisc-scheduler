@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import "./CourseEditor.css";
+import { Course } from "./interfaces/course";
 
-export const CourseEditor = () => {
+interface CourseEditorProps {
+    onAddCourse: (newCourse: Course) => void;
+}
+
+export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
     const [course, setCourse] = useState({
-        code: "",
+        code: 0,
         title: "",
         credits: 0
     });
@@ -15,6 +20,7 @@ export const CourseEditor = () => {
     };
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
+        onAddCourse(course);
         setCourse({
             code: course.code,
             title: course.title,
