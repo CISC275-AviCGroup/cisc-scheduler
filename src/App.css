@@ -1,6 +1,5 @@
 .App {
     text-align: center;
-    background-color:#93e4c1;
 }
 
 .App-logo {
@@ -9,7 +8,7 @@
 }
 
 .scheduler {
-    background-color: #3baea0;
+    background-color: #faf15d;
 }
 
 @media (prefers-reduced-motion: no-preference) {
