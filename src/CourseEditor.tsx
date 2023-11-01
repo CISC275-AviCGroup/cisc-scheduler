@@ -12,6 +12,11 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
         title: "",
         credits: 0
     });
+    const isCourseValid = () => {
+        // Add your validation logic here
+        // For example, you can check if the title is not empty and credits are greater than 0.
+        return course.title.trim() !== "" && course.credits > 0;
+    };
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name;
@@ -20,16 +25,23 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
     };
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        onAddCourse(course);
-        setCourse({
-            code: course.code,
-            title: course.title,
-            credits: course.credits
-        });
+
+        if (isCourseValid()) {
+            onAddCourse(course);
+            setCourse({
+                code: 0,
+                title: "",
+                credits: 0
+            });
+        } else {
+            alert(
+                "Please fill in all the required fields and make sure credits are greater than 0."
+            );
+        }
     };
     return (
         <div className="fade-in">
-            <h1>Course Editor</h1>
+            {/* <h1>Course Editor</h1> */}
 
             <form onSubmit={handleSubmit}>
                 <input
@@ -59,11 +71,11 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
                 <button type="submit">Submit</button>
             </form>
 
-            <h2>Course Data</h2>
+            {/* <h2>Course Data</h2> */}
 
-            <p>Code: {course.code}</p>
+            {/* <p>Code: {course.code}</p>
             <p>Title: {course.title}</p>
-            <p>Credits: {course.credits}</p>
+            <p>Credits: {course.credits}</p> */}
         </div>
     );
 };
