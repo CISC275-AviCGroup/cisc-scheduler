@@ -14,6 +14,11 @@ const courseData = [
     {
         name: "Data Structures",
         code: "CISC 220"
+    },
+
+    {
+        name: " Introduction of Software Engineering",
+        code: "Cisc 275"
     }
     // Add more courses here.
     // We will need more info on all of these including what each course is a  prerequisite for.
