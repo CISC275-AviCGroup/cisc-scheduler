@@ -16,7 +16,8 @@ export function MakeSemester(): JSX.Element {
         setSemester({
             ...semester,
             courses: [...semester.courses, newCourse],
-            tot_creds: Number(semester.tot_creds) + Number(newCourse.credits)
+            tot_creds: Number(semester.tot_creds) + Number(newCourse.credits),
+            title: semester.title
         });
     };
 
@@ -34,12 +35,41 @@ export function MakeSemester(): JSX.Element {
                         <Form>
                             <Form.Group>
                                 <Form.Label>Semester Title:</Form.Label>
-                                <Form.Control
-                                    type="text"
+                                <Form.Check
+                                    type="radio"
                                     name="title"
-                                    placeholder="Semester title"
-                                    value={semester.title}
                                     onChange={handleChange}
+                                    id="Title-check-Fall"
+                                    label="Fall"
+                                    value="Fall"
+                                    checked={semester.title === "Fall"}
+                                />
+                                <Form.Check
+                                    type="radio"
+                                    name="title"
+                                    onChange={handleChange}
+                                    id="Title-check-Winter"
+                                    label="Winter"
+                                    value="Winter"
+                                    checked={semester.title === "Winter"}
+                                />
+                                <Form.Check
+                                    type="radio"
+                                    name="title"
+                                    onChange={handleChange}
+                                    id="Title-check-Spring"
+                                    label="Spring"
+                                    value="Spring"
+                                    checked={semester.title === "Spring"}
+                                />
+                                <Form.Check
+                                    type="radio"
+                                    name="title"
+                                    onChange={handleChange}
+                                    id="Title-check-Summer"
+                                    label="Summer"
+                                    value="Summer"
+                                    checked={semester.title === "Summer"}
                                 />
                             </Form.Group>
                         </Form>
@@ -47,7 +77,7 @@ export function MakeSemester(): JSX.Element {
                     </Col>
                     <Col>
                         <h2>Semester Data</h2>
-                        <p>Title: {semester.title}</p>
+                        <p>Semester: {semester.title}</p>
                         <p>Credits: {semester.tot_creds}</p>
                         <h3>Courses:</h3>
                         <ul className="noBulletsUL">

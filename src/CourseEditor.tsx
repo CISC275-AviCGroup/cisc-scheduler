@@ -29,8 +29,7 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
     };
     return (
         <div>
-            <h1>Course Editor</h1>
-
+            <h1>Add Course:</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -59,11 +58,11 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
                 <button type="submit">Submit</button>
             </form>
 
-            <h2>Course Data</h2>
+            {/*             <h2>Course Data</h2>
 
             <p>Code: {course.code}</p>
             <p>Title: {course.title}</p>
-            <p>Credits: {course.credits}</p>
+            <p>Credits: {course.credits}</p> */}
         </div>
     );
 };
