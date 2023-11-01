@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (55 ms)
+  ✕ renders the course name somewhere (57 ms)
 
   ● renders the course name somewhere
 
@@ -74,6 +74,27 @@ FAIL src/App.test.tsx
                         [33mtype[39m=[32m"number"[39m
                         [33mvalue[39m=[32m"0"[39m
                       [36m/>[39m
+                      [36m<div>[39m
+                        [36m<p>[39m
+                          [0mPrerequisite courses:[0m
+                        [36m</p>[39m
+                        [36m<label>[39m
+                          [36m<input[39m
+                            [33mname[39m=[32m"prerequisites"[39m
+                            [33mtype[39m=[32m"checkbox"[39m
+                            [33mvalue[39m=[32m"CISC 108"[39m
+                          [36m/>[39m
+                          [0mCISC 108[0m
+                        [36m</label>[39m
+                        [36m<label>[39m
+                          [36m<input[39m
+                            [33mname[39m=[32m"prerequisites"[39m
+                            [33mtype[39m=[32m"checkbox"[39m
+                            [33mvalue[39m=[32m"CISC 181"[39m
+                          [36m/>[39m
+                          [0mCISC 181[0m
+                        [36m</label>[39m
+                      [36m</div>[39m
                       [36m<button[39m
                         [33mtype[39m=[32m"submit"[39m
                       [36m>[39m
@@ -128,25 +149,25 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
--------------------|---------|----------|---------|---------|-------------------
-File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------------|---------|----------|---------|---------|-------------------
-All files          |    42.3 |        0 |   33.33 |    42.3 |                   
- src               |    42.3 |        0 |   33.33 |    42.3 |                   
-  App.tsx          |     100 |      100 |     100 |     100 |                   
-  CourseData.tsx   |       0 |      100 |     100 |       0 | 1                 
-  CourseEditor.tsx |      40 |        0 |      25 |      40 | 18,22-24,27-37    
-  MakeSemester.tsx |   44.44 |      100 |      25 |   44.44 | 16,24-26,55       
-  Plan.tsx         |       0 |        0 |       0 |       0 |                   
- src/interfaces    |       0 |        0 |       0 |       0 |                   
-  course.tsx       |       0 |        0 |       0 |       0 |                   
-  school_year.tsx  |       0 |        0 |       0 |       0 |                   
-  semester.tsx     |       0 |        0 |       0 |       0 |                   
--------------------|---------|----------|---------|---------|-------------------
+-------------------|---------|----------|---------|---------|-------------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s       
+-------------------|---------|----------|---------|---------|-------------------------
+All files          |    37.5 |        0 |   27.27 |    38.7 |                         
+ src               |    37.5 |        0 |   27.27 |    38.7 |                         
+  App.tsx          |     100 |      100 |     100 |     100 |                         
+  CourseData.ts    |       0 |      100 |     100 |       0 | 1                       
+  CourseEditor.tsx |   33.33 |        0 |   16.66 |      35 | 17-18,22-24,29-31,35-46 
+  MakeSemester.tsx |   44.44 |      100 |      25 |   44.44 | 16,24-26,55             
+  Plan.tsx         |       0 |        0 |       0 |       0 |                         
+ src/interfaces    |       0 |        0 |       0 |       0 |                         
+  course.ts        |       0 |        0 |       0 |       0 |                         
+  school_year.ts   |       0 |        0 |       0 |       0 |                         
+  semester.ts      |       0 |        0 |       0 |       0 |                         
+-------------------|---------|----------|---------|---------|-------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.28 s
+Time:        2.077 s
 Ran all test suites.
 Jest did not exit one second after the test run has completed.
 
