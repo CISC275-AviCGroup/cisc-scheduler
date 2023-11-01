@@ -7,4 +7,8 @@ export interface Course {
     title: string;
     /** The credit count of a course */
     credits: number;
+    /**
+     * The pre-requisities of the course, contain `<ABBREVIATION> <CODE>`
+     */
+    prerequisites: string[];
 }
