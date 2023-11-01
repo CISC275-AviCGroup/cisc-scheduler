@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (75 ms)
+  ✕ renders the course name somewhere (55 ms)
 
   ● renders the course name somewhere
 
@@ -55,9 +55,6 @@ FAIL src/App.test.tsx
                   [36m<div[39m
                     [33mclass[39m=[32m"fade-in"[39m
                   [36m>[39m
-                    [36m<h1>[39m
-                      [0mCourse Editor[0m
-                    [36m</h1>[39m
                     [36m<form>[39m
                       [36m<input[39m
                         [33mname[39m=[32m"code"[39m
@@ -83,21 +80,6 @@ FAIL src/App.test.tsx
                         [0mSubmit[0m
                       [36m</button>[39m
                     [36m</form>[39m
-                    [36m<h2>[39m
-                      [0mCourse Data[0m
-                    [36m</h2>[39m
-                    [36m<p>[39m
-                      [0mCode: [0m
-                      [0m0[0m
-                    [36m</p>[39m
-                    [36m<p>[39m
-                      [0mTitle: [0m
-                      [0m[0m
-                    [36m</p>[39m
-                    [36m<p>[39m
-                      [0mCredits: [0m
-                      [0m0[0m
-                    [36m</p>[39m
                   [36m</div>[39m
                 [36m</div>[39m
                 [36m<div[39m
@@ -149,11 +131,11 @@ FAIL src/App.test.tsx
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------|---------|----------|---------|---------|-------------------
-All files          |   45.45 |      100 |    37.5 |   45.45 |                   
- src               |   45.45 |      100 |    37.5 |   45.45 |                   
+All files          |    42.3 |        0 |   33.33 |    42.3 |                   
+ src               |    42.3 |        0 |   33.33 |    42.3 |                   
   App.tsx          |     100 |      100 |     100 |     100 |                   
   CourseData.tsx   |       0 |      100 |     100 |       0 | 1                 
-  CourseEditor.tsx |   45.45 |      100 |   33.33 |   45.45 | 17-19,22-24       
+  CourseEditor.tsx |      40 |        0 |      25 |      40 | 18,22-24,27-37    
   MakeSemester.tsx |   44.44 |      100 |      25 |   44.44 | 16,24-26,55       
   Plan.tsx         |       0 |        0 |       0 |       0 |                   
  src/interfaces    |       0 |        0 |       0 |       0 |                   
@@ -164,8 +146,11 @@ All files          |   45.45 |      100 |    37.5 |   45.45 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.876 s
+Time:        2.28 s
 Ran all test suites.
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
