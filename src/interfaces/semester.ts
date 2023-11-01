@@ -6,7 +6,7 @@ export interface Semester {
     // title of the semester (season-year)
     title: string;
     // list of courses in a given semester
-    courses: [Course];
+    courses: Course[];
     // total credits in a given semester
     tot_creds: number;
 }
