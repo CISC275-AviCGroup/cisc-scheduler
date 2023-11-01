@@ -7,15 +7,15 @@ interface CourseEditorProps {
 }
 
 export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
-    const [course, setCourse] = useState({
+    const [course, setCourse] = useState<Course>({
         code: 0,
         title: "",
-        credits: 0
+        credits: 0,
+        prerequisites: []
     });
     const isCourseValid = () => {
-        // Add your validation logic here
-        // For example, you can check if the title is not empty and credits are greater than 0.
         return course.title.trim() !== "" && course.credits > 0;
+        course.prerequisites.length >= 0;
     };
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,6 +23,14 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
         const value = event.target.value;
         setCourse({ ...course, [name]: value });
     };
+    const handlePrerequisitesChange = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        const value = event.target.value;
+        const prerequisites = value.split(",").map((code) => code.trim());
+        setCourse({ ...course, prerequisites });
+    };
+
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
@@ -31,7 +39,8 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
             setCourse({
                 code: 0,
                 title: "",
-                credits: 0
+                credits: 0,
+                prerequisites: []
             });
         } else {
             alert(
@@ -67,15 +76,32 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
                     value={course.credits}
                     onChange={handleChange}
                 />
+                <div>
+                    <p>Prerequisite courses:</p>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="prerequisites"
+                            value="CISC 108"
+                            checked={course.prerequisites.includes("CISC 108")}
+                            onChange={handlePrerequisitesChange}
+                        />
+                        CISC 108
+                    </label>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="prerequisites"
+                            value="CISC 181"
+                            checked={course.prerequisites.includes("CISC 181")}
+                            onChange={handlePrerequisitesChange}
+                        />
+                        CISC 181
+                    </label>
+                </div>
 
                 <button type="submit">Submit</button>
             </form>
-
-            {/* <h2>Course Data</h2> */}
-
-            {/* <p>Code: {course.code}</p>
-            <p>Title: {course.title}</p>
-            <p>Credits: {course.credits}</p> */}
         </div>
     );
 };
