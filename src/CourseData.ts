@@ -69,6 +69,16 @@ const courseData = [
         name: "PARALLEL PROGRAMMING",
         code: "CISC 372",
         prerequisites: ["CISC220"]
+    },
+    {
+        name: "CISC 498 COMPUTER SCIENCE SENIOR DESIGN PROJECT I",
+        code: "CISC 498",
+        prerequisites: ["CISC275 and CISC320"]
+    },
+    {
+        name: "CISC 499 COMPUTER SCIENCE SENIOR DESIGN PROJECT II",
+        code: "CISC 499",
+        prerequisites: ["CISC 498"]
     }
 ];
 
