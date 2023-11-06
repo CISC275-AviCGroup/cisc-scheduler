@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Container, Row, Form } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Year } from "./interfaces/school_year";
 import { Semester } from "./interfaces/semester";
 import { MakeSemester } from "./MakeSemester";
