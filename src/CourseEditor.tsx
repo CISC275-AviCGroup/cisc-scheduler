@@ -1,35 +1,49 @@
 import React, { useState } from "react";
 import "./CourseEditor.css";
 import { Course } from "./interfaces/course";
+import { Button } from "react-bootstrap";
 
 interface CourseEditorProps {
     onAddCourse: (newCourse: Course) => void;
 }
 
 export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
-    const [course, setCourse] = useState({
-        code: 0,
+    const [course, setCourse] = useState<Course>({
+        code: "",
         title: "",
-        credits: 0
+        credits: "",
+        prerequisites: []
     });
+    const isCourseValid = () => {
+        return course.title.trim() !== "" && Number(course.credits) > 0;
+        course.prerequisites.length >= 0;
+    };
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name;
         const value = event.target.value;
         setCourse({ ...course, [name]: value });
     };
+
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        onAddCourse(course);
-        setCourse({
-            code: course.code,
-            title: course.title,
-            credits: course.credits
-        });
+
+        if (isCourseValid()) {
+            onAddCourse(course);
+            setCourse({
+                code: "0",
+                title: "",
+                credits: "0",
+                prerequisites: []
+            });
+        } else {
+            alert(
+                "Please fill in all required fields and make sure credits are greater than 0."
+            );
+        }
     };
     return (
-        <div>
-            <h1>Add Course:</h1>
+        <div className="fade-in">
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -54,15 +68,8 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
                     value={course.credits}
                     onChange={handleChange}
                 />
-
-                <button type="submit">Submit</button>
+                <Button type="submit">Submit</Button>
             </form>
-
-            {/*             <h2>Course Data</h2>
-
-            <p>Code: {course.code}</p>
-            <p>Title: {course.title}</p>
-            <p>Credits: {course.credits}</p> */}
         </div>
     );
 };

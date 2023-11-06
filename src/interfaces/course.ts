@@ -1,10 +1,16 @@
 // Interface for each course. Contains info like credits, grades, and etc.
 
+import { StringArraySupportOption } from "prettier";
+
 export interface Course {
     /** A unique identifier for the course (XXX) */
-    code: number;
+    code: string;
     /** The title of the course */
     title: string;
     /** The credit count of a course */
-    credits: number;
+    credits: string;
+    /**
+     * The pre-requisities of the course, contain `<ABBREVIATION> <CODE>`
+     */
+    prerequisites: string[];
 }

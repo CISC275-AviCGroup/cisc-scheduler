@@ -3,10 +3,11 @@
 import { Semester } from "./semester";
 
 export interface Year {
+    curryear: string;
     // The year
-    title: string;
+    season: string;
     // list of semesters in a given year
-    semesters: [Semester];
+    semesters: Semester[];
     // Total credits in a given year
     tot_creds: number;
 }

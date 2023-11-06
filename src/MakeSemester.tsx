@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { Semester } from "./interfaces/semester";
 import { CourseEditor } from "./CourseEditor";
-import { Col, Container, Row, Form } from "react-bootstrap";
+import { Col, Container, Row, Form, Button } from "react-bootstrap";
 import { Course } from "./interfaces/course";
+import "./MakeSemester.css";
 import "./App.css";
 
-export function MakeSemester(): JSX.Element {
+interface MakeSemesterProps {
+    onAddSemester: (newSemester: Semester) => void;
+}
+
+export const MakeSemester: React.FC<MakeSemesterProps> = ({
+    onAddSemester
+}) => {
     const [semester, setSemester] = useState<Semester>({
         title: "",
         courses: [],
@@ -27,14 +34,26 @@ export function MakeSemester(): JSX.Element {
         setSemester({ ...semester, [name]: value });
     };
 
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        onAddSemester(semester);
+        setSemester({
+            title: "",
+            courses: [],
+            tot_creds: 0
+        });
+    };
+
     return (
-        <div>
+        <span className="fade-in">
+            <form onSubmit={handleSubmit}></form>
+            <CourseEditor onAddCourse={addCourseToSemester} />
             <Container>
                 <Row>
                     <Col>
                         <Form>
                             <Form.Group>
-                                <Form.Label>Semester Title:</Form.Label>
+                                <Form.Label>Add Course:</Form.Label>
                                 <Form.Check
                                     type="radio"
                                     name="title"
@@ -73,14 +92,13 @@ export function MakeSemester(): JSX.Element {
                                 />
                             </Form.Group>
                         </Form>
-                        <CourseEditor onAddCourse={addCourseToSemester} />
                     </Col>
                     <Col>
-                        <h2>Semester Data</h2>
+                        <h2>Semester Data:</h2>
                         <p>Semester: {semester.title}</p>
                         <p>Credits: {semester.tot_creds}</p>
                         <h3>Courses:</h3>
-                        <ul className="noBulletsUL">
+                        <ol className="noBulletsUL">
                             {semester.courses.map((course, index) => {
                                 return (
                                     <li key={index}>
@@ -88,12 +106,13 @@ export function MakeSemester(): JSX.Element {
                                     </li>
                                 );
                             })}
-                        </ul>
+                        </ol>
+                        <Button type="submit">Add to Plan</Button>
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </span>
     );
-}
+};
 
 export default MakeSemester;
