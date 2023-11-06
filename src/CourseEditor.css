@@ -79,6 +79,7 @@
 
 .fade-in {
     animation: fadeIn 1s ease-in;
+    margin-top: 30px;
 }
 
 @keyframes fadeIn {

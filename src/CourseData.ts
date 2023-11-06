@@ -46,11 +46,6 @@ const courseData = [
         prerequisites: ["MATH210 and CISC220"]
     },
     {
-        name: "INTRODUCTION TO ALGORITHMS",
-        code: "CISC 320",
-        prerequisites: ["MATH210 and CISC220"]
-    },
-    {
         name: "COMPUTERS, ETHICS AND SOCIETY",
         code: "CISC 355",
         prerequisites: []

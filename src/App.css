@@ -15,7 +15,7 @@
 
 .App {
     text-align: center;
-
+    color: azure;
 }
 
 .App-logo {
@@ -24,7 +24,16 @@
 }
 
 .scheduler {
-    background-color: #faf15d;
+    background-color: #003c71;
+    height: 150px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #003c71;
+    border-bottom-color: yellow;
+    color: white;
+    padding: 40px;
+    margin-bottom: 50px;
+    display: flex;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -56,4 +65,11 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.blueHen {
+    float: left;
+    margin-top: -10px;
+    margin-left: 7px;
+    margin-right: 320px;
 }
