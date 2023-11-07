@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (104 ms)
+  ✕ renders the course name somewhere (84 ms)
 
   ● renders the course name somewhere
 
@@ -99,14 +99,14 @@ FAIL src/App.test.tsx
                                   [33mid[39m=[32m"Title-check-Fall"[39m
                                   [33mname[39m=[32m"title"[39m
                                   [33mtype[39m=[32m"radio"[39m
-                                  [33mvalue[39m=[32m"Fall"[39m
+                                  [33mvalue[39m=[32m" Fall"[39m
                                 [36m/>[39m
                                 [36m<label[39m
                                   [33mclass[39m=[32m"form-check-label"[39m
                                   [33mfor[39m=[32m"Title-check-Fall"[39m
                                   [33mtitle[39m=[32m""[39m
                                 [36m>[39m
-                                  [0mFall[0m
+                                  [0m🍂 Fall[0m
                                 [36m</label>[39m
                               [36m</div>[39m
                               [36m<div[39m
@@ -124,7 +124,7 @@ FAIL src/App.test.tsx
                                   [33mfor[39m=[32m"Title-check-Winter"[39m
                                   [33mtitle[39m=[32m""[39m
                                 [36m>[39m
-                                  [0mWinter[0m
+                                  [0m❄️ Winter[0m
                                 [36m</label>[39m
                               [36m</div>[39m
                               [36m<div[39m
@@ -142,7 +142,7 @@ FAIL src/App.test.tsx
                                   [33mfor[39m=[32m"Title-check-Spring"[39m
                                   [33mtitle[39m=[32m""[39m
                                 [36m>[39m
-                                  [0mSpring[0m
+                                  [0m 🌸 Spring[0m
                                 [36m</label>[39m
                               [36m</div>[39m
                               [36m<div[39m
@@ -160,7 +160,7 @@ FAIL src/App.test.tsx
                                   [33mfor[39m=[32m"Title-check-Summer"[39m
                                   [33mtitle[39m=[32m""[39m
                                 [36m>[39m
-                                  [0mSummer[0m
+                                  [0m Summer[0m
                                 [36m</label>[39m
                               [36m</div>[39m
                             [36m</div>[39m
@@ -262,8 +262,11 @@ All files          |   43.24 |        0 |   30.76 |   43.24 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.979 s
+Time:        2.336 s
 Ran all test suites.
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
