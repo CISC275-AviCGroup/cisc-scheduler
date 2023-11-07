@@ -22,6 +22,18 @@
     height: 40vmin;
     pointer-events: none;
 }
+@media (max-width: 768px) {
+    .scheduler {
+        height: 100px;
+        padding: 20px;
+    }
+}
+@media (min-width: 769px) {
+    .scheduler {
+        height: 150px;
+        padding: 40px;
+    }
+}
 
 .scheduler {
     background-color: #003c71;

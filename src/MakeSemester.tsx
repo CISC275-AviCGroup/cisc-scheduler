@@ -27,6 +27,16 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
             title: semester.title
         });
     };
+    const removeCourseFromSemester = (courseToRemove: Course) => {
+        const updatedCourses = semester.courses.filter(
+            (course) => course !== courseToRemove
+        );
+        setSemester({
+            ...semester,
+            courses: updatedCourses,
+            tot_creds: semester.tot_creds - Number(courseToRemove.credits)
+        });
+    };
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name;
@@ -103,6 +113,13 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                 return (
                                     <li key={index}>
                                         {course.code} - {course.title}
+                                        <Button
+                                            onClick={() =>
+                                                removeCourseFromSemester(course)
+                                            }
+                                        >
+                                            Remove
+                                        </Button>
                                     </li>
                                 );
                             })}
