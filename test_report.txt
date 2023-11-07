@@ -160,7 +160,7 @@ FAIL src/App.test.tsx
                                   [33mfor[39m=[32m"Title-check-Summer"[39m
                                   [33mtitle[39m=[32m""[39m
                                 [36m>[39m
-                                  [0m Summer[0m
+                                  [0m☀️ Summer[0m
                                 [36m</label>[39m
                               [36m</div>[39m
                             [36m</div>[39m
@@ -262,7 +262,7 @@ All files          |   40.47 |        0 |      25 |   40.47 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.765 s
+Time:        2.811 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
