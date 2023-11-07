@@ -59,8 +59,8 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Fall"
-                                    label="Fall"
-                                    value="Fall"
+                                    label="🍂 Fall"
+                                    value=" Fall"
                                     checked={semester.title === "Fall"}
                                 />
                                 <Form.Check
@@ -68,7 +68,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Winter"
-                                    label="Winter"
+                                    label="❄️ Winter"
                                     value="Winter"
                                     checked={semester.title === "Winter"}
                                 />
@@ -77,7 +77,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Spring"
-                                    label="Spring"
+                                    label=" 🌸 Spring"
                                     value="Spring"
                                     checked={semester.title === "Spring"}
                                 />
@@ -86,7 +86,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Summer"
-                                    label="Summer"
+                                    label=" Summer"
                                     value="Summer"
                                     checked={semester.title === "Summer"}
                                 />
