@@ -27,6 +27,16 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
             title: semester.title
         });
     };
+    const removeCourseFromSemester = (courseToRemove: Course) => {
+        const updatedCourses = semester.courses.filter(
+            (course) => course !== courseToRemove
+        );
+        setSemester({
+            ...semester,
+            courses: updatedCourses,
+            tot_creds: semester.tot_creds - Number(courseToRemove.credits)
+        });
+    };
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name = event.target.name;
@@ -59,8 +69,8 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Fall"
-                                    label="Fall"
-                                    value="Fall"
+                                    label="🍂 Fall"
+                                    value=" Fall"
                                     checked={semester.title === "Fall"}
                                 />
                                 <Form.Check
@@ -68,7 +78,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Winter"
-                                    label="Winter"
+                                    label="❄️ Winter"
                                     value="Winter"
                                     checked={semester.title === "Winter"}
                                 />
@@ -77,7 +87,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Spring"
-                                    label="Spring"
+                                    label=" 🌸 Spring"
                                     value="Spring"
                                     checked={semester.title === "Spring"}
                                 />
@@ -86,7 +96,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Summer"
-                                    label="Summer"
+                                    label="☀️ Summer"
                                     value="Summer"
                                     checked={semester.title === "Summer"}
                                 />
@@ -103,6 +113,13 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                 return (
                                     <li key={index}>
                                         {course.code} - {course.title}
+                                        <Button
+                                            onClick={() =>
+                                                removeCourseFromSemester(course)
+                                            }
+                                        >
+                                            Remove
+                                        </Button>
                                     </li>
                                 );
                             })}

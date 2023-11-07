@@ -1,6 +1,12 @@
-.HoriontalList{
+.HoriontalList {
     display: inline;
     margin-right: 10px;
     list-style-type: none;
     padding: 0;
+}
+@media (max-width: 768px) {
+    .HoriontalList {
+        display: block;
+        margin-right: 0;
+    }
 }
