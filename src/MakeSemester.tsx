@@ -96,7 +96,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                     name="title"
                                     onChange={handleChange}
                                     id="Title-check-Summer"
-                                    label=" Summer"
+                                    label="☀️ Summer"
                                     value="Summer"
                                     checked={semester.title === "Summer"}
                                 />
