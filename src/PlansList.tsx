@@ -42,7 +42,7 @@ export const PlansList = ({
                     ></PlanCard>
                 ))}
                 <Button className="add_btn" onClick={showModal}>
-                    Add New Quiz
+                    Add New Plan
                 </Button>
             </>
             {/* 
