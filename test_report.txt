@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (45 ms)
+  ✕ renders the course name somewhere (56 ms)
 
   ● renders the course name somewhere
 
@@ -61,7 +61,7 @@ FAIL src/App.test.tsx
                   [33mclass[39m=[32m"add_btn btn btn-primary"[39m
                   [33mtype[39m=[32m"button"[39m
                 [36m>[39m
-                  [0mAdd New Quiz[0m
+                  [0mAdd New Plan[0m
                 [36m</button>[39m
               [36m</div>[39m
               [36m<div />[39m
@@ -113,8 +113,11 @@ All files          |    25.6 |     12.5 |   17.14 |   26.58 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.105 s
+Time:        2.363 s
 Ran all test suites.
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
