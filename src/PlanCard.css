@@ -1,0 +1,10 @@
+.plan_view_card {
+    background-color: rgb(227, 201, 0);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: #003c71;
+}
+
+.title {
+    margin-right: 1rem;
+}
