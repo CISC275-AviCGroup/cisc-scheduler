@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import logo from "./logo-udel.png";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Plan from "./Plan";
 import Planners from "./Planner";
 
