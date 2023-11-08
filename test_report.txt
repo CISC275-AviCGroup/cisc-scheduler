@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (57 ms)
+  ✕ renders the course name somewhere (45 ms)
 
   ● renders the course name somewhere
 
@@ -27,201 +27,47 @@ FAIL src/App.test.tsx
               [0mCISC Scheduler[0m
             [36m</h1>[39m
           [36m</div>[39m
-          [36m<span[39m
-            [33mclass[39m=[32m"fade-in"[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"display: block;"[39m
           [36m>[39m
             [36m<div[39m
-              [33mclass[39m=[32m"container"[39m
+              [33mclass[39m=[32m"planners"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"row"[39m
+                [33mclass[39m=[32m"plan_list"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
+                  [33mclass[39m=[32m"plan_view_card"[39m
                 [36m>[39m
-                  [36m<span[39m
-                    [33mclass[39m=[32m"fade-in"[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"d-flex align-items-baseline"[39m
                   [36m>[39m
-                    [36m<form />[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"fade-in"[39m
+                    [36m<h3[39m
+                      [33mclass[39m=[32m"title"[39m
                     [36m>[39m
-                      [36m<form>[39m
-                        [36m<input[39m
-                          [33mname[39m=[32m"code"[39m
-                          [33mplaceholder[39m=[32m"Course code"[39m
-                          [33mtype[39m=[32m"text"[39m
-                          [33mvalue[39m=[32m""[39m
-                        [36m/>[39m
-                        [36m<input[39m
-                          [33mname[39m=[32m"title"[39m
-                          [33mplaceholder[39m=[32m"Course title"[39m
-                          [33mtype[39m=[32m"text"[39m
-                          [33mvalue[39m=[32m""[39m
-                        [36m/>[39m
-                        [36m<input[39m
-                          [33mname[39m=[32m"credits"[39m
-                          [33mplaceholder[39m=[32m"Credits"[39m
-                          [33mtype[39m=[32m"number"[39m
-                          [33mvalue[39m=[32m""[39m
-                        [36m/>[39m
-                        [36m<button[39m
-                          [33mclass[39m=[32m"btn btn-primary"[39m
-                          [33mtype[39m=[32m"submit"[39m
-                        [36m>[39m
-                          [0mSubmit[0m
-                        [36m</button>[39m
-                      [36m</form>[39m
-                    [36m</div>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"container"[39m
-                    [36m>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"row"[39m
-                      [36m>[39m
-                        [36m<div[39m
-                          [33mclass[39m=[32m"col"[39m
-                        [36m>[39m
-                          [36m<form[39m
-                            [33mclass[39m=[32m""[39m
-                          [36m>[39m
-                            [36m<div>[39m
-                              [36m<label[39m
-                                [33mclass[39m=[32m"form-label"[39m
-                              [36m>[39m
-                                [0mAdd Course:[0m
-                              [36m</label>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"form-check"[39m
-                              [36m>[39m
-                                [36m<input[39m
-                                  [33mclass[39m=[32m"form-check-input"[39m
-                                  [33mid[39m=[32m"Title-check-Fall"[39m
-                                  [33mname[39m=[32m"title"[39m
-                                  [33mtype[39m=[32m"radio"[39m
-                                  [33mvalue[39m=[32m" Fall"[39m
-                                [36m/>[39m
-                                [36m<label[39m
-                                  [33mclass[39m=[32m"form-check-label"[39m
-                                  [33mfor[39m=[32m"Title-check-Fall"[39m
-                                  [33mtitle[39m=[32m""[39m
-                                [36m>[39m
-                                  [0m🍂 Fall[0m
-                                [36m</label>[39m
-                              [36m</div>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"form-check"[39m
-                              [36m>[39m
-                                [36m<input[39m
-                                  [33mclass[39m=[32m"form-check-input"[39m
-                                  [33mid[39m=[32m"Title-check-Winter"[39m
-                                  [33mname[39m=[32m"title"[39m
-                                  [33mtype[39m=[32m"radio"[39m
-                                  [33mvalue[39m=[32m"Winter"[39m
-                                [36m/>[39m
-                                [36m<label[39m
-                                  [33mclass[39m=[32m"form-check-label"[39m
-                                  [33mfor[39m=[32m"Title-check-Winter"[39m
-                                  [33mtitle[39m=[32m""[39m
-                                [36m>[39m
-                                  [0m❄️ Winter[0m
-                                [36m</label>[39m
-                              [36m</div>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"form-check"[39m
-                              [36m>[39m
-                                [36m<input[39m
-                                  [33mclass[39m=[32m"form-check-input"[39m
-                                  [33mid[39m=[32m"Title-check-Spring"[39m
-                                  [33mname[39m=[32m"title"[39m
-                                  [33mtype[39m=[32m"radio"[39m
-                                  [33mvalue[39m=[32m"Spring"[39m
-                                [36m/>[39m
-                                [36m<label[39m
-                                  [33mclass[39m=[32m"form-check-label"[39m
-                                  [33mfor[39m=[32m"Title-check-Spring"[39m
-                                  [33mtitle[39m=[32m""[39m
-                                [36m>[39m
-                                  [0m 🌸 Spring[0m
-                                [36m</label>[39m
-                              [36m</div>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"form-check"[39m
-                              [36m>[39m
-                                [36m<input[39m
-                                  [33mclass[39m=[32m"form-check-input"[39m
-                                  [33mid[39m=[32m"Title-check-Summer"[39m
-                                  [33mname[39m=[32m"title"[39m
-                                  [33mtype[39m=[32m"radio"[39m
-                                  [33mvalue[39m=[32m"Summer"[39m
-                                [36m/>[39m
-                                [36m<label[39m
-                                  [33mclass[39m=[32m"form-check-label"[39m
-                                  [33mfor[39m=[32m"Title-check-Summer"[39m
-                                  [33mtitle[39m=[32m""[39m
-                                [36m>[39m
-                                  [0m☀️ Summer[0m
-                                [36m</label>[39m
-                              [36m</div>[39m
-                            [36m</div>[39m
-                          [36m</form>[39m
-                        [36m</div>[39m
-                        [36m<div[39m
-                          [33mclass[39m=[32m"col"[39m
-                        [36m>[39m
-                          [36m<h2>[39m
-                            [0mSemester Data:[0m
-                          [36m</h2>[39m
-                          [36m<p>[39m
-                            [0mSemester: [0m
-                            [0m[0m
-                          [36m</p>[39m
-                          [36m<p>[39m
-                            [0mCredits: [0m
-                            [0m0[0m
-                          [36m</p>[39m
-                          [36m<h3>[39m
-                            [0mCourses:[0m
-                          [36m</h3>[39m
-                          [36m<ol[39m
-                            [33mclass[39m=[32m"noBulletsUL"[39m
-                          [36m/>[39m
-                          [36m<button[39m
-                            [33mclass[39m=[32m"btn btn-primary"[39m
-                            [33mtype[39m=[32m"submit"[39m
-                          [36m>[39m
-                            [0mAdd to Plan[0m
-                          [36m</button>[39m
-                        [36m</div>[39m
-                      [36m</div>[39m
-                    [36m</div>[39m
-                  [36m</span>[39m
+                      [0mData Science[0m
+                    [36m</h3>[39m
+                    [36m<p>[39m
+                      [0m1[0m
+                      [0m semester[0m
+                      [0m[0m
+                    [36m</p>[39m
+                  [36m</div>[39m
+                  [36m<p>[39m
+                    [0mtest plan[0m
+                  [36m</p>[39m
                 [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"col"[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"add_btn btn btn-primary"[39m
+                  [33mtype[39m=[32m"button"[39m
                 [36m>[39m
-                  [36m<h2>[39m
-                    [0mSchool Year:[0m
-                  [36m</h2>[39m
-                  [36m<p>[39m
-                    [0m[0m
-                    [0m - [0m
-                    [0m[0m
-                  [36m</p>[39m
-                  [36m<p>[39m
-                    [0mCredits: [0m
-                    [0m0[0m
-                  [36m</p>[39m
-                  [36m<h3>[39m
-                    [0mCourses:[0m
-                  [36m</h3>[39m
-                  [36m<ul[39m
-                    [33mclass[39m=[32m"HoriontalList"[39m
-                  [36m/>[39m
-                [36m</div>[39m
+                  [0mAdd New Quiz[0m
+                [36m</button>[39m
               [36m</div>[39m
+              [36m<div />[39m
+              [36m<hr />[39m
             [36m</div>[39m
-          [36m</span>[39m
+          [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
     [36m</body>[39m
@@ -244,25 +90,30 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
--------------------|---------|----------|---------|---------|------------------------------
-File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s            
--------------------|---------|----------|---------|---------|------------------------------
-All files          |   40.47 |        0 |      25 |   40.47 |                              
- src               |   40.47 |        0 |      25 |   40.47 |                              
-  App.tsx          |     100 |      100 |     100 |     100 |                              
-  CourseData.ts    |       0 |      100 |     100 |       0 | 1                            
-  CourseEditor.tsx |    37.5 |        0 |      25 |    37.5 | 18-19,23-25,29-40            
-  MakeSemester.tsx |   36.84 |      100 |    12.5 |   36.84 | 23,31-34,42-44,48-50,113-118 
-  Plan.tsx         |      60 |      100 |   33.33 |      60 | 17,42                        
- src/interfaces    |       0 |        0 |       0 |       0 |                              
-  course.ts        |       0 |        0 |       0 |       0 |                              
-  school_year.ts   |       0 |        0 |       0 |       0 |                              
-  semester.ts      |       0 |        0 |       0 |       0 |                              
--------------------|---------|----------|---------|---------|------------------------------
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |    25.6 |     12.5 |   17.14 |   26.58 |                   
+ src               |    25.6 |     12.5 |   17.14 |   26.58 |                   
+  AddPlanModal.tsx |   35.71 |      100 |      20 |   35.71 | 19-22,38-57       
+  App.tsx          |     100 |      100 |     100 |     100 |                   
+  CourseData.ts    |       0 |      100 |     100 |       0 | 1                 
+  CourseEditor.tsx |       0 |        0 |       0 |       0 | 10-45             
+  MakeSemester.tsx |       0 |      100 |       0 |       0 | 13-118            
+  Plan.tsx         |       0 |      100 |       0 |       0 | 9-42              
+  PlanCard.tsx     |   66.66 |       50 |      50 |   66.66 | 18                
+  Planner.tsx      |   46.66 |        0 |    12.5 |   58.33 | 34-50             
+  PlansList.tsx    |      75 |      100 |      50 |      75 | 27,31             
+ src/interfaces    |       0 |        0 |       0 |       0 |                   
+  course.ts        |       0 |        0 |       0 |       0 |                   
+  plan.ts          |       0 |        0 |       0 |       0 |                   
+  school_year.ts   |       0 |        0 |       0 |       0 |                   
+  semester.ts      |       0 |        0 |       0 |       0 |                   
+-------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.811 s
+Time:        3.105 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
