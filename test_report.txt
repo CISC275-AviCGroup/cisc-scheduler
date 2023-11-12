@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (56 ms)
+  ✕ renders the course name somewhere (57 ms)
 
   ● renders the course name somewhere
 
@@ -56,6 +56,11 @@ FAIL src/App.test.tsx
                   [36m<p>[39m
                     [0mtest plan[0m
                   [36m</p>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"delete_button"[39m
+                  [36m>[39m
+                    [0mDelete[0m
+                  [36m</button>[39m
                 [36m</div>[39m
                 [36m<button[39m
                   [33mclass[39m=[32m"add_btn btn btn-primary"[39m
@@ -93,15 +98,15 @@ FAIL src/App.test.tsx
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------|---------|----------|---------|---------|-------------------
-All files          |    25.6 |     12.5 |   17.14 |   26.58 |                   
- src               |    25.6 |     12.5 |   17.14 |   26.58 |                   
+All files          |    25.3 |     12.5 |   16.66 |   26.25 |                   
+ src               |    25.3 |     12.5 |   16.66 |   26.25 |                   
   AddPlanModal.tsx |   35.71 |      100 |      20 |   35.71 | 19-22,38-57       
   App.tsx          |     100 |      100 |     100 |     100 |                   
   CourseData.ts    |       0 |      100 |     100 |       0 | 1                 
   CourseEditor.tsx |       0 |        0 |       0 |       0 | 10-45             
   MakeSemester.tsx |       0 |      100 |       0 |       0 | 13-118            
   Plan.tsx         |       0 |      100 |       0 |       0 | 9-42              
-  PlanCard.tsx     |   66.66 |       50 |      50 |   66.66 | 18                
+  PlanCard.tsx     |      50 |       50 |   33.33 |      50 | 23-36             
   Planner.tsx      |   46.66 |        0 |    12.5 |   58.33 | 34-50             
   PlansList.tsx    |      75 |      100 |      50 |      75 | 27,31             
  src/interfaces    |       0 |        0 |       0 |       0 |                   
@@ -113,7 +118,7 @@ All files          |    25.6 |     12.5 |   17.14 |   26.58 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.363 s
+Time:        2.529 s
 Ran all test suites.
 Jest did not exit one second after the test run has completed.
 
