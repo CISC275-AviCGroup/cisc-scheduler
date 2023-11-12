@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cisc-scheduler/static/css/main.d22bf480.css",
-    "main.js": "/cisc-scheduler/static/js/main.407c8e13.js",
+    "main.css": "/cisc-scheduler/static/css/main.7a0e7410.css",
+    "main.js": "/cisc-scheduler/static/js/main.4693c94a.js",
     "static/js/787.4ef7427d.chunk.js": "/cisc-scheduler/static/js/787.4ef7427d.chunk.js",
     "static/media/logo-udel.png": "/cisc-scheduler/static/media/logo-udel.1730ce3e0ee1a3f3d658.png",
     "index.html": "/cisc-scheduler/index.html",
-    "main.d22bf480.css.map": "/cisc-scheduler/static/css/main.d22bf480.css.map",
-    "main.407c8e13.js.map": "/cisc-scheduler/static/js/main.407c8e13.js.map",
+    "main.7a0e7410.css.map": "/cisc-scheduler/static/css/main.7a0e7410.css.map",
+    "main.4693c94a.js.map": "/cisc-scheduler/static/js/main.4693c94a.js.map",
     "787.4ef7427d.chunk.js.map": "/cisc-scheduler/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d22bf480.css",
-    "static/js/main.407c8e13.js"
+    "static/css/main.7a0e7410.css",
+    "static/js/main.4693c94a.js"
   ]
 }

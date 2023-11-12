@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (57 ms)
+  ✕ renders the course name somewhere (44 ms)
 
   ● renders the course name somewhere
 
@@ -31,46 +31,55 @@ FAIL src/App.test.tsx
             [33mstyle[39m=[32m"display: block;"[39m
           [36m>[39m
             [36m<div[39m
-              [33mclass[39m=[32m"planners"[39m
+              [33mclass[39m=[32m"intro-container"[39m
+              [33mid[39m=[32m"introBox"[39m
             [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"plan_list"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"plan_view_card"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"d-flex align-items-baseline"[39m
-                  [36m>[39m
-                    [36m<h3[39m
-                      [33mclass[39m=[32m"title"[39m
-                    [36m>[39m
-                      [0mData Science[0m
-                    [36m</h3>[39m
-                    [36m<p>[39m
-                      [0m1[0m
-                      [0m semester[0m
-                      [0m[0m
-                    [36m</p>[39m
-                  [36m</div>[39m
+              [36m<h2>[39m
+                [0mIntroduction to CISC Scheduler[0m
+              [36m</h2>[39m
+              [36m<br />[39m
+              [36m<p>[39m
+                [0mEmbarking on your Computer and Information Sciences (CISC) degree journey is an exciting adventure filled with opportunities for growth and learning. Our Degree Plan Scheduler is designed to be your trusted companion, guiding you through the complexity of course selection and helping you chart a clear path towards your academic and career goals.[0m
+              [36m</p>[39m
+              [36m<br />[39m
+              [36m<h5>[39m
+                [0mKey Features:[0m
+              [36m</h5>[39m
+              [36m<ul>[39m
+                [36m<li>[39m
+                  [0mMultiple Plans[0m
                   [36m<p>[39m
-                    [0mtest plan[0m
+                    [0mSeamlessly create, customize, and track multiple degree paths within our platform, empowering you to explore diverse academic pursuits and tailor your education to your unique goals.[0m
                   [36m</p>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"delete_button"[39m
-                  [36m>[39m
-                    [0mDelete[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"add_btn btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mAdd New Plan[0m
-                [36m</button>[39m
-              [36m</div>[39m
-              [36m<div />[39m
-              [36m<hr />[39m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mPrerequsites[0m
+                  [36m<p>[39m
+                    [0mOur degree planning feature now includes the ability to set course prerequisites, allowing you to create a well-structured academic roadmap. Define essential requirements for each course, ensuring a cohesive and personalized learning experience tailored to your academic goals.[0m
+                  [36m</p>[39m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mExport/Import Plans[0m
+                  [36m<p>[39m
+                    [0mEffortlessly import plans to access them across platforms or export your curated educational roadmap for easy sharing and collaborative planning. This feature streamlines your degree planning experience, ensuring accessibility and collaboration in shaping your academic future.[0m
+                  [36m</p>[39m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mVisualize Unfilled Course[0m
+                  [36m<p>[39m
+                    [0mIdentify and track the remaining courses needed to complete your degree plan, allowing for a comprehensive overview and streamlined planning process. Stay organized and make informed decisions with this valuable feature that ensures you are always on the right track toward achieving your academic goals.[0m
+                  [36m</p>[39m
+                [36m</li>[39m
+              [36m</ul>[39m
+              [36m<p>[39m
+                [0mThank you for choosing our scheduler application to navigate your academic journey. We are honored to be part of your educational experience, and we are committed to providing you wiht a powerfull tool to achieve your goals. If you have any have any feedback or questions, feel free to reach out. Best of of luck, and happy planning![0m
+              [36m</p>[39m
+              [36m<br />[39m
+              [36m<button[39m
+                [33mid[39m=[32m"closeIntroBtn"[39m
+              [36m>[39m
+                [0mStart Planning[0m
+              [36m</button>[39m
             [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
@@ -98,17 +107,18 @@ FAIL src/App.test.tsx
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------|---------|----------|---------|---------|-------------------
-All files          |    25.3 |     12.5 |   16.66 |   26.25 |                   
- src               |    25.3 |     12.5 |   16.66 |   26.25 |                   
-  AddPlanModal.tsx |   35.71 |      100 |      20 |   35.71 | 19-22,38-57       
-  App.tsx          |     100 |      100 |     100 |     100 |                   
+All files          |   11.36 |       10 |    5.26 |    11.9 |                   
+ src               |   11.36 |       10 |    5.26 |    11.9 |                   
+  AddPlanModal.tsx |    7.14 |      100 |       0 |    7.14 | 15-57             
+  App.tsx          |      75 |       50 |      50 |     100 | 23                
   CourseData.ts    |       0 |      100 |     100 |       0 | 1                 
   CourseEditor.tsx |       0 |        0 |       0 |       0 | 10-45             
+  Introduction.tsx |     100 |      100 |     100 |     100 |                   
   MakeSemester.tsx |       0 |      100 |       0 |       0 | 13-118            
   Plan.tsx         |       0 |      100 |       0 |       0 | 9-42              
-  PlanCard.tsx     |      50 |       50 |   33.33 |      50 | 23-36             
-  Planner.tsx      |   46.66 |        0 |    12.5 |   58.33 | 34-50             
-  PlansList.tsx    |      75 |      100 |      50 |      75 | 27,31             
+  PlanCard.tsx     |      25 |        0 |       0 |      25 | 17-36             
+  Planner.tsx      |   13.33 |        0 |       0 |   16.66 | 30-56             
+  PlansList.tsx    |    12.5 |      100 |       0 |    12.5 | 24-38             
  src/interfaces    |       0 |        0 |       0 |       0 |                   
   course.ts        |       0 |        0 |       0 |       0 |                   
   plan.ts          |       0 |        0 |       0 |       0 |                   
@@ -118,11 +128,8 @@ All files          |    25.3 |     12.5 |   16.66 |   26.25 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.529 s
+Time:        3.229 s
 Ran all test suites.
-Jest did not exit one second after the test run has completed.
-
-This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
