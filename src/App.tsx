@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React from "react";
 import "./App.css";
 import logo from "./logo-udel.png";
