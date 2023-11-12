@@ -6,9 +6,14 @@ import "./PlanCard.css";
 interface planCardProps {
     plan: Plan;
     handleClick: (planID: string) => void;
+    handleDelete: (planID: string) => void;
 }
 
-export const PlanCard = ({ plan, handleClick }: planCardProps) => {
+export const PlanCard = ({
+    plan,
+    handleClick,
+    handleDelete
+}: planCardProps) => {
     return (
         <div className="plan_view_card">
             <div className="d-flex align-items-baseline">
@@ -26,6 +31,12 @@ export const PlanCard = ({ plan, handleClick }: planCardProps) => {
                 </p>
             </div>
             <p>{plan.body}</p>
+            <button
+                className="delete_button"
+                onClick={() => handleDelete(plan.title)}
+            >
+                Delete
+            </button>
         </div>
     );
 };
