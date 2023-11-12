@@ -39,6 +39,7 @@ export const PlansList = ({
                         key={plan.title}
                         plan={plan}
                         handleClick={handlePlanView}
+                        handleDelete={deletePlan}
                     ></PlanCard>
                 ))}
                 <Button className="add_btn" onClick={showModal}>
