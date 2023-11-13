@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (44 ms)
+  ✕ renders the course name somewhere (86 ms)
 
   ● renders the course name somewhere
 
@@ -107,8 +107,8 @@ FAIL src/App.test.tsx
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------|---------|----------|---------|---------|-------------------
-All files          |   11.36 |       10 |    5.26 |    11.9 |                   
- src               |   11.36 |       10 |    5.26 |    11.9 |                   
+All files          |   10.86 |       10 |    4.87 |   11.36 |                   
+ src               |   10.86 |       10 |    4.87 |   11.36 |                   
   AddPlanModal.tsx |    7.14 |      100 |       0 |    7.14 | 15-57             
   App.tsx          |      75 |       50 |      50 |     100 | 23                
   CourseData.ts    |       0 |      100 |     100 |       0 | 1                 
@@ -117,6 +117,7 @@ All files          |   11.36 |       10 |    5.26 |    11.9 |
   MakeSemester.tsx |       0 |      100 |       0 |       0 | 13-118            
   Plan.tsx         |       0 |      100 |       0 |       0 | 9-42              
   PlanCard.tsx     |      25 |        0 |       0 |      25 | 17-36             
+  PlanCardEdit.tsx |       0 |      100 |       0 |       0 | 13-25             
   Planner.tsx      |   13.33 |        0 |       0 |   16.66 | 30-56             
   PlansList.tsx    |    12.5 |      100 |       0 |    12.5 | 24-38             
  src/interfaces    |       0 |        0 |       0 |       0 |                   
@@ -128,7 +129,7 @@ All files          |   11.36 |       10 |    5.26 |    11.9 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.229 s
+Time:        3.282 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
