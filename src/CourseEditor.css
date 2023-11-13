@@ -64,6 +64,11 @@
     align-items: center;
     gap: 0.75rem;
 }
+@media (max-width: 768px) {
+    .edit_title_box {
+        flex-direction: column;
+    }
+}
 
 .type_form {
     display: flex;

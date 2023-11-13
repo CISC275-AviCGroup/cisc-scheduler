@@ -1,0 +1,56 @@
+.intro-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    /* Center content horizontally and vertically using Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 130vh;
+    width: 300vh;
+    /* Adjust if necessary */
+}
+
+h2 {
+    color: #333333;
+    text-align: center
+}
+
+h5 {
+    color: #333333;
+    text-align: left
+}
+
+p {
+    color: #555555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+li {
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 0px;
+    padding: 10px 25px;
+    background-color: #003c70;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    color: #ffff00;
+}
