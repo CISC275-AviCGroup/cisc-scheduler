@@ -14,6 +14,7 @@ export function Plan(): JSX.Element {
     });
 
     const addSemesterToYear = (newSemester: Semester) => {
+        console.log("logging to log");
         setYear({
             ...year,
             curryear: year.curryear,
