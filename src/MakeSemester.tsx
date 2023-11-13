@@ -56,7 +56,6 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
 
     return (
         <span className="fade-in">
-            <form onSubmit={handleSubmit}></form>
             <CourseEditor onAddCourse={addCourseToSemester} />
             <Container>
                 <Row>
@@ -124,7 +123,9 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
                                 );
                             })}
                         </ol>
-                        <Button type="submit">Add to Plan</Button>
+                        <Form onSubmit={handleSubmit}>
+                            <Button type="submit">Add to Plan</Button>
+                        </Form>
                     </Col>
                 </Row>
             </Container>
