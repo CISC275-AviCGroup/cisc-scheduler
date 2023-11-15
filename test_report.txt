@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (46 ms)
+  ✕ renders the course name somewhere (44 ms)
 
   ● renders the course name somewhere
 
@@ -107,15 +107,15 @@ FAIL src/App.test.tsx
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------|---------|----------|---------|---------|-------------------
-All files          |   10.86 |       10 |    4.87 |   11.36 |                   
- src               |   10.86 |       10 |    4.87 |   11.36 |                   
+All files          |   10.75 |       10 |    4.87 |   11.23 |                   
+ src               |   10.75 |       10 |    4.87 |   11.23 |                   
   AddPlanModal.tsx |    7.14 |      100 |       0 |    7.14 | 15-57             
   App.tsx          |      75 |       50 |      50 |     100 | 23                
   CourseData.ts    |       0 |      100 |     100 |       0 | 1                 
   CourseEditor.tsx |       0 |        0 |       0 |       0 | 10-45             
   Introduction.tsx |     100 |      100 |     100 |     100 |                   
-  MakeSemester.tsx |       0 |      100 |       0 |       0 | 13-118            
-  Plan.tsx         |       0 |      100 |       0 |       0 | 9-42              
+  MakeSemester.tsx |       0 |      100 |       0 |       0 | 13-117            
+  Plan.tsx         |       0 |      100 |       0 |       0 | 9-43              
   PlanCard.tsx     |      25 |        0 |       0 |      25 | 17-36             
   PlanCardEdit.tsx |       0 |      100 |       0 |       0 | 13-25             
   Planner.tsx      |   13.33 |        0 |       0 |   16.66 | 30-56             
@@ -129,7 +129,7 @@ All files          |   10.86 |       10 |    4.87 |   11.36 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.119 s
+Time:        3.088 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
