@@ -6,7 +6,28 @@
     text-align: left;
 }
 
-.add_btn {
+/* .add_btn {
     width: 10rem;
     align-self: center;
+}
+
+.add_btn:hover {
+    color: #ffff00;
+} */
+
+.add_btn {
+    margin-top: 0px;
+    padding: 10px 25px;
+    background-color: #003c70;
+    align-self: center;
+    width: 250px;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add_btn:hover {
+    color: #ffff00;
 }
