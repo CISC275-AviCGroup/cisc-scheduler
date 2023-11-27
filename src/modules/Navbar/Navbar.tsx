@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./Nav.module.css";
-import * as data from "./links.json";
+import styles from "./Navbar.module.css";
+import * as data from "../../assets/data/links.json";
 import { NavLink } from "react-router-dom";
 const linksString = JSON.stringify(data);
 const links = JSON.parse(linksString).links;

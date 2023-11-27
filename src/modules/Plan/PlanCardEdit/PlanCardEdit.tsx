@@ -1,5 +1,5 @@
 import React from "react";
-import { Plan } from "./interfaces/plan";
+import { Plan } from "../../../interfaces/plan";
 
 import "./PlanCard.css";
 
