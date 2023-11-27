@@ -7,6 +7,7 @@ import { useState } from "react";
 import Plan from "./Plan";
 import Planners from "./Planner";
 import Introduction from "./Introduction";
+import Nav from "./Navbar";
 
 function App(): JSX.Element {
     const [planner, showPlanner] = useState<boolean>(false);
@@ -15,6 +16,7 @@ function App(): JSX.Element {
 
     return (
         <div className="App">
+            <Nav />
             <div className="scheduler">
                 <img className="blueHen" src={logo} alt="" />
                 <h1>CISC Scheduler</h1>
