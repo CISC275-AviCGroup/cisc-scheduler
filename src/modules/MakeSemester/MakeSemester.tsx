@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Semester } from "./interfaces/semester";
-import { CourseEditor } from "./CourseEditor";
+import { Semester } from "../../interfaces/semester";
+import { CourseEditor } from "../CourseEditor/CourseEditor";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
-import { Course } from "./interfaces/course";
+import { Course } from "../../interfaces/course";
 import "./MakeSemester.css";
 import "./App.css";
 

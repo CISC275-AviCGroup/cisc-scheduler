@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Plan } from "./interfaces/plan";
-import { PlanCard } from "./PlanCard";
+import { Plan } from "../../../interfaces/plan";
+import { PlanCard } from "../PlanCard/PlanCard";
 import "./PlansList.css";
 
 //import { QuizView } from "./QuizView";

@@ -1,9 +1,9 @@
 /* eslint-disable no-extra-parens */
 import React from "react";
 import "./App.css";
-import logo from "./logo-udel.png";
-import Introduction from "./Introduction";
-import Nav from "./Navbar";
+import logo from "../../assets/images/logo-udel.png";
+import Introduction from "../Introduction/Introduction";
+import Nav from "../Navbar/Navbar";
 
 function App(): JSX.Element {
     return (
