@@ -2,11 +2,11 @@
     "links": [
         {
             "label": "Introduction",
-            "href": "/Introduction"
+            "href": "/intro"
         },
         {
             "label": "Planner",
-            "href": "/PlansList"
+            "href": "/planner"
         }
     ]
 }

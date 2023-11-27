@@ -1,12 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import "./Introduction.css";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { useState } from "react";
+import React from "react";
 
-interface IntroProps {
-    showplanner: () => void;
-}
+export const Introduction = () => {
+    const navigate = useNavigate();
 
-export const Introduction = ({ showplanner }: IntroProps) => {
+    const redirectToPlanner = () => {
+        navigate("/planner");
+    };
+
     return (
         <div className="intro-container" id="introBox">
             <h2>Introduction to CISC Scheduler</h2>
@@ -80,7 +82,7 @@ export const Introduction = ({ showplanner }: IntroProps) => {
 
             <br></br>
 
-            <button id="closeIntroBtn" onClick={showplanner}>
+            <button id="closeIntroBtn" onClick={redirectToPlanner}>
                 Start Planning
             </button>
         </div>
