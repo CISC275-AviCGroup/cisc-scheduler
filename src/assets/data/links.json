@@ -1,0 +1,12 @@
+{
+    "links": [
+        {
+            "label": "Introduction",
+            "href": "/intro"
+        },
+        {
+            "label": "Planner",
+            "href": "/planner"
+        }
+    ]
+}

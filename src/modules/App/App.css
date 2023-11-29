@@ -87,3 +87,7 @@
     height: auto; /* Maintain aspect ratio */
     margin-right: 320px;
 }
+.w {
+    display: block;
+    width: 100%;
+}

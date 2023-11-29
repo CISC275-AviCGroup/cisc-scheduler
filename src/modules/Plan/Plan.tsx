@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Year } from "./interfaces/school_year";
-import { Semester } from "./interfaces/semester";
-import { MakeSemester } from "./MakeSemester";
-import "./Plan.css";
+import { Year } from "../../interfaces/school_year";
+import { Semester } from "../../interfaces/semester";
+import { MakeSemester } from "../MakeSemester/MakeSemester";
+import "./Plan.module.css";
 
 export function Plan(): JSX.Element {
     const [year, setYear] = useState<Year>({
@@ -14,6 +14,7 @@ export function Plan(): JSX.Element {
     });
 
     const addSemesterToYear = (newSemester: Semester) => {
+        console.log("logging to log");
         setYear({
             ...year,
             curryear: year.curryear,
