@@ -1,19 +1,30 @@
-// You will not need to modify this file
-
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./modules/App/App";
+import Planners from "./modules/Plan/Planner/Planner";
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById("root")
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <App />
+        },
+        {
+            path: "planner",
+            element: <Planners />
+        },
+        {
+            path: "intro",
+            element: <span>dk dnaielssleiand kd</span>
+        }
+    ],
+    {
+        basename: process.env.PUBLIC_URL
+    }
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+createRoot(document.getElementById("root") as unknown as HTMLElement).render(
+    <RouterProvider router={router} />
+);

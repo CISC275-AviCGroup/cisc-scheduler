@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CourseEditor.css";
-import { Course } from "./interfaces/course";
+import { Course } from "../../interfaces/course";
 import { Button } from "react-bootstrap";
 
 interface CourseEditorProps {

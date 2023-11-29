@@ -1,8 +1,8 @@
-import "./Plan.css";
+import "../Plan.module.css";
 import React, { useState } from "react";
-import { Plan } from "./interfaces/plan";
-import { PlansList } from "./PlansList";
-import { AddPlanModal } from "./AddPlanModal";
+import { Plan } from "../../../interfaces/plan";
+import { PlansList } from "../PlansList/PlansList";
+import { AddPlanModal } from "../AddPlanModal/AddPlanModal";
 
 const sample_plan: Plan[] = [
     {
