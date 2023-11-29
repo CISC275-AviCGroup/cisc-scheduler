@@ -46,21 +46,20 @@ export const PlansList = ({
                     Add New Plan
                 </Button>
             </>
-            {/* 
-            {quizzes.map((quiz: Quiz) => {
-                if (displayId === quiz.id) {
+            {plans.map((plan: Plan) => {
+                if (planID === plan.title) {
                     return (
-                        <PlanCard
-                            key={quiz.id}
-                            quiz={quiz}
-                            editQuiz={editQuiz}
-                            deleteQuiz={deleteQuiz}
-                            resetView={resetQuizView}
-                        ></PlanCard>
+                        <PlanView
+                            key={plan.id}
+                            plan={plan}
+                            editPlan={editPlan}
+                            deletePlan={deletePlan}
+                            resetView={resetPlanView}
+                        ></PlanView>
                     );
                 }
                 return null;
-            })} */}
+            })}
         </div>
     );
 };
