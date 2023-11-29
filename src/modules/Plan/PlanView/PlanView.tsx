@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Plan } from "./interfaces/plan";
+import { Plan } from "../../../interfaces/plan";
 
 import { PlanExpanded } from "./PlanExpanded";
-import { PlanEdit } from "./PlanEdit";
+import { PlanEdit } from "../PlanEdit/PlanEdit";
 
 /* import "./QuizView.css";
  */
