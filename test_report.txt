@@ -477,7 +477,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (173 ms)
+  ✕ renders the course name somewhere (159 ms)
 
   ● renders the course name somewhere
 
@@ -518,7 +518,7 @@ FAIL src/modules/App/App.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |   10.89 |        0 |   11.36 |   11.22 |                   
+All files                  |    7.97 |        0 |    8.19 |    8.27 |                   
  assets/data               |       0 |      100 |     100 |       0 |                   
   CourseData.ts            |       0 |      100 |     100 |       0 | 1                 
  interfaces                |       0 |        0 |       0 |       0 |                   
@@ -526,6 +526,11 @@ All files                  |   10.89 |        0 |   11.36 |   11.22 |
   plan.ts                  |       0 |        0 |       0 |       0 |                   
   school_year.ts           |       0 |        0 |       0 |       0 |                   
   semester.ts              |       0 |        0 |       0 |       0 |                   
+ modules                   |       0 |      100 |       0 |       0 |                   
+  Plan.tsx                 |       0 |      100 |       0 |       0 | 9-43              
+  SemesterList.tsx         |       0 |      100 |       0 |       0 | 15-34             
+ modules/AddSemesterModal  |       0 |      100 |       0 |       0 |                   
+  AddSemesterModal.tsx     |       0 |      100 |       0 |       0 | 10-89             
  modules/App               |     100 |      100 |     100 |     100 |                   
   App.tsx                  |     100 |      100 |     100 |     100 |                   
  modules/CourseEditor      |       0 |        0 |       0 |       0 |                   
@@ -536,21 +541,23 @@ All files                  |   10.89 |        0 |   11.36 |   11.22 |
   MakeSemester.tsx         |       0 |      100 |       0 |       0 | 13-117            
  modules/Navbar            |     100 |      100 |     100 |     100 |                   
   Navbar.tsx               |     100 |      100 |     100 |     100 |                   
- modules/Plan              |       0 |      100 |       0 |       0 |                   
-  Plan.tsx                 |       0 |      100 |       0 |       0 | 9-43              
  modules/Plan/AddPlanModal |       0 |      100 |       0 |       0 |                   
   AddPlanModal.tsx         |       0 |      100 |       0 |       0 | 10-57             
  modules/Plan/PlanCard     |       0 |        0 |       0 |       0 |                   
   PlanCard.tsx             |       0 |        0 |       0 |       0 | 12-36             
- modules/Plan/PlanCardEdit |       0 |      100 |       0 |       0 |                   
-  PlanCardEdit.tsx         |       0 |      100 |       0 |       0 | 13-25             
- modules/Plan/Planner      |       0 |        0 |       0 |       0 |                   
-  Planner.tsx              |       0 |        0 |       0 |       0 | 7-56              
- modules/Plan/PlansList    |       0 |      100 |       0 |       0 |                   
-  PlansList.tsx            |       0 |      100 |       0 |       0 | 18-38             
+ modules/Plan/PlanView     |       0 |      100 |       0 |       0 |                   
+  PlanView.tsx             |       0 |      100 |       0 |       0 | 10-20             
+ modules/Plan/Planner      |       0 |      100 |       0 |       0 |                   
+  Planner.tsx              |       0 |      100 |       0 |       0 | 6-55              
+ modules/Plan/PlansList    |       0 |        0 |       0 |       0 |                   
+  PlansList.tsx            |       0 |        0 |       0 |       0 | 20-65             
+ modules/SemesterCard      |       0 |      100 |       0 |       0 |                   
+  SemesterCard.tsx         |       0 |      100 |       0 |       0 | 13-40             
+ modules/Semesters         |       0 |      100 |       0 |       0 |                   
+  Semesters.tsx            |       0 |      100 |       0 |       0 | 7-53              
 ---------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.766 s
+Time:        2.881 s
 Ran all test suites.
