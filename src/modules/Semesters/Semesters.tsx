@@ -1,8 +1,8 @@
 import "./Semester.css";
 import React, { useState } from "react";
-import { Semester } from "./interfaces/semester";
-import { SemesterList } from "./SemesterList";
-import { AddSemesterModal } from "./AddSemesterModal";
+import { Semester } from "../../interfaces/semester";
+import { SemesterList } from "../SemesterList";
+import { AddSemesterModal } from "../AddSemesterModal/AddSemesterModal";
 
 const sample_Semester: Semester[] = [
     {
@@ -23,14 +23,14 @@ export const Semesters = () => {
     const [semesters, setSemesters] = useState<Semester[]>(sample_Semester);
     const [showAddModal, setShowAddModal] = useState(false);
 
-    function editSemester(sTitle: string, newSemester: Semester) {
+    /*function editSemester(sTitle: string, newSemester: Semester) {
         setSemesters(
             semesters.map(
                 (s: Semester): Semester =>
                     s.title === sTitle ? newSemester : s
             )
         );
-    }
+    }*/
 
     function addSemester(title: string) {
         const newSemester: Semester = {
@@ -51,10 +51,10 @@ export const Semesters = () => {
     const handleCloseModal = () => setShowAddModal(false);
 
     return (
-        <div className="planners">
+        <div className="semesters">
             <SemesterList
                 semesters={semesters}
-                editSemester={editSemester}
+                //editSemester={editSemester}
                 deleteSemester={deleteSemester}
                 showModal={handleShowModal}
             ></SemesterList>

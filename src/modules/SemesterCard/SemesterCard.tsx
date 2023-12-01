@@ -1,29 +1,28 @@
 import React from "react";
-import { Semester } from "./interfaces/semester";
-
+import { Semester } from "../../interfaces/semester";
 import "./SemesterCard.css";
 import { Button } from "react-bootstrap";
-import { Course } from "./interfaces/course";
+import { Course } from "../../interfaces/course";
 
 interface semesterCardProps {
     semester: Semester;
-    handleClick: (planID: string) => void;
+    //handleClick: (planID: string) => void;
     handleDelete: (planID: string) => void;
 }
 
 export const SemesterCard = ({
     semester,
-    handleClick,
+    //handleClick,
     handleDelete
 }: semesterCardProps) => {
     return (
-        <div className="plan_view_card">
+        <div className="semester_view_card">
             <div className="d-flex align-items-baseline">
                 <h3
                     className="title"
-                    onClick={() => {
+                    /*                     onClick={() => {
                         handleClick(semester.title);
-                    }}
+                    }} */
                 >
                     {semester.title}
                 </h3>

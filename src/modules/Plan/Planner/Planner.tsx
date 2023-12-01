@@ -1,4 +1,3 @@
-import "../Plan.module.css";
 import React, { useState } from "react";
 import { Plan } from "../../../interfaces/plan";
 import { PlansList } from "../PlansList/PlansList";
@@ -30,11 +29,11 @@ export const Planners = () => {
     const [plans, setPlans] = useState<Plan[]>(sample_plan);
     const [showAddModal, setShowAddModal] = useState(false);
 
-    function editPlan(pTitle: string, newPlan: Plan) {
+    /*     function editPlan(pTitle: string, newPlan: Plan) {
         setPlans(
             plans.map((p: Plan): Plan => (p.title === pTitle ? newPlan : p))
         );
-    }
+    } */
 
     function addPlan(title: string, body: string) {
         const newPlan: Plan = {
@@ -57,7 +56,7 @@ export const Planners = () => {
         <div className="planners">
             <PlansList
                 plans={plans}
-                editPlan={editPlan}
+                //editPlan={editPlan}
                 deletePlan={deletePlan}
                 showModal={handleShowModal}
             ></PlansList>
