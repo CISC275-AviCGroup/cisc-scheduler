@@ -5,19 +5,21 @@ import { Button } from "react-bootstrap";
 import { Plan } from "../../../interfaces/plan";
 import { PlanCard } from "../PlanCard/PlanCard";
 import "./PlansList.css";
-
-//import { QuizView } from "./QuizView";
+import { PlanView } from "../PlanView/PlanView";
+import { SemesterList } from "../../SemesterList";
+import { Semester } from "../../../interfaces/semester";
+import Semesters from "../../Semesters/Semesters";
 
 interface plansListProps {
     plans: Plan[];
-    editPlan: (pTitle: string, newPlan: Plan) => void;
+    //editPlan: (pTitle: string, newPlan: Plan) => void;
     deletePlan: (pTitle: string) => void;
     showModal: () => void;
 }
 
 export const PlansList = ({
     plans,
-    editPlan,
+    //editPlan,
     deletePlan,
     showModal
 }: plansListProps) => {
@@ -33,34 +35,36 @@ export const PlansList = ({
 
     return (
         <div className="plan_list">
-            <>
-                {plans.map((plan: Plan) => (
-                    <PlanCard
-                        key={plan.title}
-                        plan={plan}
-                        handleClick={handlePlanView}
-                        handleDelete={deletePlan}
-                    ></PlanCard>
-                ))}
-                <Button className="add_btn" onClick={showModal}>
-                    Add New Plan
-                </Button>
-            </>
-            {/* 
-            {quizzes.map((quiz: Quiz) => {
-                if (displayId === quiz.id) {
-                    return (
+            {!planID && (
+                <>
+                    {plans.map((plan: Plan) => (
                         <PlanCard
-                            key={quiz.id}
-                            quiz={quiz}
-                            editQuiz={editQuiz}
-                            deleteQuiz={deleteQuiz}
-                            resetView={resetQuizView}
+                            key={plan.title}
+                            plan={plan}
+                            handleClick={handlePlanView}
+                            handleDelete={deletePlan}
                         ></PlanCard>
+                    ))}
+                    <Button className="add_btn" onClick={showModal}>
+                        Add New Plan
+                    </Button>
+                </>
+            )}
+            {plans.map((plan: Plan) => {
+                if (planID === plan.title) {
+                    return (
+                        <PlanView
+                            key={plan.title}
+                            plan={plan}
+                            deletePlan={deletePlan}
+                            //editPlan={editPlan}
+                            //resetPlan={resetPlanView}
+                        ></PlanView>
                     );
+                } else {
+                    return;
                 }
-                return null;
-            })} */}
+            })}
         </div>
     );
 };
