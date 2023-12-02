@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cisc-scheduler/static/css/main.950dd16c.css",
-    "main.js": "/cisc-scheduler/static/js/main.979f199a.js",
+    "main.js": "/cisc-scheduler/static/js/main.1966b444.js",
     "static/media/logo-udel.png": "/cisc-scheduler/static/media/logo-udel.1730ce3e0ee1a3f3d658.png",
     "index.html": "/cisc-scheduler/index.html",
     "main.950dd16c.css.map": "/cisc-scheduler/static/css/main.950dd16c.css.map",
-    "main.979f199a.js.map": "/cisc-scheduler/static/js/main.979f199a.js.map"
+    "main.1966b444.js.map": "/cisc-scheduler/static/js/main.1966b444.js.map"
   },
   "entrypoints": [
     "static/css/main.950dd16c.css",
-    "static/js/main.979f199a.js"
+    "static/js/main.1966b444.js"
   ]
 }
