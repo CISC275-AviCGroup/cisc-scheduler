@@ -1,6 +1,5 @@
-/* eslint-disable no-extra-parens */
 import React, { useState, useEffect } from "react";
-
+import "./catalog.css";
 interface Courses {
     code: string;
     name: string;
