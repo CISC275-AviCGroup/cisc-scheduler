@@ -4,7 +4,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./modules/App/App";
 import Planners from "./modules/Plan/Planner/Planner";
-
 const router = createBrowserRouter(
     [
         {
@@ -17,7 +16,7 @@ const router = createBrowserRouter(
         },
         {
             path: "intro",
-            element: <span>dk dnaielssleiand kd</span>
+            element: <span></span>
         }
     ],
     {
