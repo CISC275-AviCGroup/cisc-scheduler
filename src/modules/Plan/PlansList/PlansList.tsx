@@ -1,14 +1,12 @@
 /* eslint-disable no-extra-parens */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Plan } from "../../../interfaces/plan";
 import { PlanCard } from "../PlanCard/PlanCard";
 import "./PlansList.css";
-import { PlanView } from "../PlanView/PlanView";
-import { SemesterList } from "../../SemesterList";
-import { Semester } from "../../../interfaces/semester";
-import Semesters from "../../Semesters/Semesters";
+
+//import { PlanView } from "../../Plan/PlanView/PlanView";
+
 
 interface plansListProps {
     plans: Plan[];
@@ -23,42 +21,61 @@ export const PlansList = ({
     deletePlan,
     showModal
 }: plansListProps) => {
-    const [planID, setPlanID] = useState<null | string>(null);
+    const [planID, setPlanID] = useState<string[]>([]);
+    const [showPlan, setShowPlan] = useState<boolean>(false);
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const handleShowPlan = () => {
+        setShowPlan(!showPlan);
+    };
 
     const handlePlanView = (title: string) => {
-        setPlanID(title);
+        handleShowPlan;
+        setPlanID([...planID, title]);
     };
 
     const resetPlanView = () => {
-        setPlanID(null);
+        setPlanID([]);
     };
 
     return (
         <div className="plan_list">
-            {!planID && (
-                <>
-                    {plans.map((plan: Plan) => (
+            <div className="plan_list">
+                {plans.map((plan: Plan) => (
+                    <div key={plan.title}>
                         <PlanCard
-                            key={plan.title}
                             plan={plan}
                             handleClick={handlePlanView}
                             handleDelete={deletePlan}
-                        ></PlanCard>
-                    ))}
-                    <Button className="add_btn" onClick={showModal}>
-                        Add New Plan
-                    </Button>
-                </>
-            )}
-            {plans.map((plan: Plan) => {
+                            planPicked={planID}
+                            editPlan={editPlan}
+                            deletePlan={deletePlan}
+                            resetView={() => resetPlanView()}
+                        />
+                        {/* {planID === plan.title && (
+                            <PlanView
+                                plan={plan}
+                                editPlan={editPlan}
+                                deletePlan={deletePlan}
+                                resetView={() => resetPlanView()}
+                            />
+                        )} */}
+                    </div>
+                ))}
+                <Button className="add_btn_plan" onClick={showModal}>
+                    Add New Plan
+                </Button>
+            </div>
+
+            {/* {plans.map((plan: Plan) => {
                 if (planID === plan.title) {
                     return (
                         <PlanView
                             key={plan.title}
                             plan={plan}
+                            editPlan={editPlan}
                             deletePlan={deletePlan}
-                            //editPlan={editPlan}
-                            //resetPlan={resetPlanView}
+                            resetView={resetPlanView}
                         ></PlanView>
                     );
                 } else {
