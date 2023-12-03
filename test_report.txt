@@ -477,7 +477,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (181 ms)
+  ✕ renders the course name somewhere (164 ms)
 
   ● renders the course name somewhere
 
@@ -518,7 +518,7 @@ FAIL src/modules/App/App.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |    7.33 |        0 |    7.69 |    7.58 |                   
+All files                  |    6.39 |        0 |    6.25 |    6.58 |                   
  assets/data               |       0 |      100 |     100 |       0 |                   
   CourseData.ts            |       0 |      100 |     100 |       0 | 1                 
  interfaces                |       0 |        0 |       0 |       0 |                   
@@ -545,13 +545,17 @@ All files                  |    7.33 |        0 |    7.69 |    7.58 |
  modules/Plan/AddPlanModal |       0 |      100 |       0 |       0 |                   
   AddPlanModal.tsx         |       0 |      100 |       0 |       0 | 10-57             
  modules/Plan/PlanCard     |       0 |        0 |       0 |       0 |                   
-  PlanCard.tsx             |       0 |        0 |       0 |       0 | 12-36             
+  PlanCard.tsx             |       0 |        0 |       0 |       0 | 18-59             
+ modules/Plan/PlanEdit     |       0 |        0 |       0 |       0 |                   
+  PlanEdit.tsx             |       0 |        0 |       0 |       0 |                   
+ modules/Plan/PlanExpanded |       0 |        0 |       0 |       0 |                   
+  PlanExpanded.tsx         |       0 |        0 |       0 |       0 | 21-98             
  modules/Plan/PlanView     |       0 |      100 |       0 |       0 |                   
-  PlanView.tsx             |       0 |      100 |       0 |       0 | 10-20             
- modules/Plan/Planner      |       0 |      100 |       0 |       0 |                   
-  Planner.tsx              |       0 |      100 |       0 |       0 | 6-55              
- modules/Plan/PlansList    |       0 |        0 |       0 |       0 |                   
-  PlansList.tsx            |       0 |        0 |       0 |       0 | 20-65             
+  PlanView.tsx             |       0 |      100 |       0 |       0 | 16-28             
+ modules/Plan/Planner      |       0 |        0 |       0 |       0 |                   
+  Planner.tsx              |       0 |        0 |       0 |       0 | 6-91              
+ modules/Plan/PlansList    |       0 |      100 |       0 |       0 |                   
+  PlansList.tsx            |       0 |      100 |       0 |       0 | 17-52             
  modules/SemesterCard      |       0 |      100 |       0 |       0 |                   
   SemesterCard.tsx         |       0 |      100 |       0 |       0 | 13-40             
  modules/Semesters         |       0 |      100 |       0 |       0 |                   
@@ -560,5 +564,5 @@ All files                  |    7.33 |        0 |    7.69 |    7.58 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.933 s
+Time:        2.974 s
 Ran all test suites.
