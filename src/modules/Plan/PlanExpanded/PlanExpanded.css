@@ -1,0 +1,17 @@
+.add_btn {
+    margin-top: 0px;
+    padding: 5x 0px;
+    margin: 5px;
+    background-color: #003c70;
+    align-self: center;
+    width: 100px;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add_btn:hover {
+    color: #ffff00;
+}

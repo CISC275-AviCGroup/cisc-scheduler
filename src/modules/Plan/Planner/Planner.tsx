@@ -17,12 +17,48 @@ const sample_plan: Plan[] = [
                         title: "CISC",
                         credits: "3",
                         prerequisites: []
+                    },
+                    {
+                        code: "210",
+                        title: "CISC",
+                        credits: "3",
+                        prerequisites: []
+                    },
+                    {
+                        code: "350",
+                        title: "CISC",
+                        credits: "3",
+                        prerequisites: []
                     }
                 ],
-                tot_creds: 3
+                tot_creds: 9
+            },
+            {
+                title: "Spring 2024",
+                courses: [
+                    {
+                        code: "38",
+                        title: "CISC",
+                        credits: "3",
+                        prerequisites: []
+                    },
+                    {
+                        code: "450",
+                        title: "CISC",
+                        credits: "3",
+                        prerequisites: []
+                    },
+                    {
+                        code: "923",
+                        title: "CISC",
+                        credits: "3",
+                        prerequisites: []
+                    }
+                ],
+                tot_creds: 9
             }
         ],
-        tot_creds: 3
+        tot_creds: 9
     }
 ];
 

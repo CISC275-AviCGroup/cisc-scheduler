@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Question } from "../interfaces/question";
+import { Question } from "../";
 import { Quiz } from "../interfaces/quiz";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { QuestionEdit } from "./QuestionEdit";
 
-import "./QuizExpanded.css";
-import { QuizQuestion } from "./QuizQuestion";
+//import "./QuizExpanded.css";
+//import { QuizQuestion } from "./QuizQuestion";
 
 interface quizExpandedProps {
     quiz: Quiz;
@@ -124,3 +124,4 @@ export const QuizExpanded = ({
         </>
     );
 };
+ */

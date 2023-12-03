@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Plan } from "../../../interfaces/plan";
 
-import { PlanExpanded } from "./PlanExpanded";
-import { PlanEdit } from "../PlanEdit/PlanEdit";
+import { PlanExpanded } from "../../Plan/PlanExpanded/PlanExpanded";
+//import { PlanEdit } from "../PlanEdit/PlanEdit";
 
 /* import "./QuizView.css";
  */
@@ -27,7 +27,16 @@ export const PlanView = ({
 
     return (
         <div className="quiz_card">
-            {edit && (
+            {
+                <PlanExpanded
+                    plan={plan}
+                    editPlan={editPlan}
+                    deletePlan={deletePlan}
+                    resetView={resetView}
+                    switchEdit={switchEdit}
+                ></PlanExpanded>
+            }
+            {/* {edit && (
                 <PlanEdit
                     quiz={quiz}
                     editQuiz={editQuiz}
@@ -43,7 +52,7 @@ export const PlanView = ({
                     resetView={resetView}
                     switchEdit={switchEdit}
                 ></PlanExpanded>
-            )}
+            )} */}
         </div>
     );
 };
