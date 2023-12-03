@@ -11,6 +11,7 @@ interface PlanViewProps {
     editPlan: (planTitle: string, plan: Plan) => void;
     deletePlan: (planTitle: string) => void;
     resetView: () => void;
+
 }
 
 export const PlanView = ({

@@ -7,16 +7,17 @@ import "./PlansList.css";
 
 //import { PlanView } from "../../Plan/PlanView/PlanView";
 
+
 interface plansListProps {
     plans: Plan[];
-    editPlan: (pTitle: string, newPlan: Plan) => void;
+    //editPlan: (pTitle: string, newPlan: Plan) => void;
     deletePlan: (pTitle: string) => void;
     showModal: () => void;
 }
 
 export const PlansList = ({
     plans,
-    editPlan,
+    //editPlan,
     deletePlan,
     showModal
 }: plansListProps) => {
@@ -77,9 +78,10 @@ export const PlansList = ({
                             resetView={resetPlanView}
                         ></PlanView>
                     );
+                } else {
+                    return;
                 }
-                return null;
-            })} */}
+            })}
         </div>
     );
 };
