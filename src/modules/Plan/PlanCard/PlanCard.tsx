@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 import React from "react";
 import { Plan } from "../../../interfaces/plan";
 import { PlanView } from "../../Plan/PlanView/PlanView";
