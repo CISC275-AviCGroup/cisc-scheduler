@@ -10,7 +10,7 @@ const CoursesList: React.FC = () => {
 
     React.useEffect(() => {
         const parsedData = JSON.parse(
-            courseData as unknown as string // because the type is wrong (donavan did not comment this)
+            courseData as unknown as string
         ) as DataCourse[];
         setCourses(parsedData);
     }, []);

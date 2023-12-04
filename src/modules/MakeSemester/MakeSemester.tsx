@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Semester } from "../../interfaces/semester";
 import { CourseEditor } from "../CourseEditor/CourseEditor";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
-import { DataCourse } from "../../interfaces/DataCourse";
 import "./MakeSemester.css";
 import "./App.css";
 import { LocalCourse } from "../../interfaces/LocalCourse";
