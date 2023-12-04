@@ -64,6 +64,11 @@
     align-items: center;
     gap: 0.75rem;
 }
+@media (max-width: 768px) {
+    .edit_title_box {
+        flex-direction: column;
+    }
+}
 
 .type_form {
     display: flex;
@@ -75,4 +80,20 @@
 
 .num_choices {
     width: 3.25rem;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+    margin-top: 30px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

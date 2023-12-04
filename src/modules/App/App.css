@@ -1,0 +1,93 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scheduler h1 {
+    animation: fadeIn 1s ease-in; /* Apply the "fadeIn" animation to the h1 element */
+}
+
+.App {
+    text-align: center;
+    color: azure;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    .scheduler {
+        height: 100px;
+        padding: 20px;
+    }
+}
+@media (min-width: 769px) {
+    .scheduler {
+        height: 150px;
+        padding: 40px;
+    }
+}
+
+.scheduler {
+    background-color: #003c70;
+    height: 150px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #003c71;
+    border-bottom-color: #ffff00;
+    color: white;
+    padding: 40px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    width: 100%;
+    background-color: #282c34;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.blueHen {
+    float: left;
+    margin-top: -10px;
+    margin-left: 7px;
+    max-width: 100%; /* Prevent image stretching */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 320px;
+}
+.w {
+    display: block;
+    width: 100%;
+}
