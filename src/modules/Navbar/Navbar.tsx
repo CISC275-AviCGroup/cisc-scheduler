@@ -3,9 +3,10 @@ import styles from "./Navbar.module.css";
 import * as data from "../../assets/data/links.json";
 import { NavLink } from "react-router-dom";
 import { Container, Navbar } from "react-bootstrap";
+import logo from "../../assets/images/logosite.png";
+
 const linksString = JSON.stringify(data);
 const links = JSON.parse(linksString).links;
-import logo from "../../assets/images/logosite.png";
 
 type Link = {
     label: string;
