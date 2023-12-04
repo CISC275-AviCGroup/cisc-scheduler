@@ -1,41 +1,25 @@
 /* eslint-disable no-extra-parens */
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./catalog.css";
-interface Courses {
-    code: string;
-    name: string;
-    descr: string;
-    credits: string;
-    preReq: string;
-    restrict: string;
-    breadth: string;
-    typ: string;
-}
+import "../../assets/data/catalog.json";
+import courseData from "../../assets/data/CourseData";
+import { DataCourse } from "../../interfaces/DataCourse";
 
 const CoursesList: React.FC = () => {
-    const [courses, setCourses] = useState<Courses[]>([]);
+    const [courses, setCourses] = React.useState<DataCourse[]>([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(
-                    "src/modules/CourseEditor/catalog.json"
-                );
-                const data = await response.json();
-                setCourses(Object.values(data));
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        };
-
-        fetchData();
+    React.useEffect(() => {
+        const parsedData = JSON.parse(
+            courseData as unknown as string // because the type is wrong (donavan did not comment this)
+        ) as DataCourse[];
+        setCourses(parsedData);
     }, []);
 
     return (
         <div>
             <h1>Courses List</h1>
             <ul>
-                {courses.map((course) => (
+                {courses.map((course: DataCourse) => (
                     <li key={course.code}>
                         <strong>{course.name}</strong>
                         <p>Code: {course.code}</p>
