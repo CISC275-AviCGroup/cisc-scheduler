@@ -477,7 +477,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (164 ms)
+  ✕ renders the course name somewhere (167 ms)
 
   ● renders the course name somewhere
 
@@ -564,5 +564,5 @@ All files                  |    6.39 |        0 |    6.25 |    6.58 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.974 s
+Time:        2.964 s
 Ran all test suites.
