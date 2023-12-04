@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./CourseEditor.css";
-import { Course } from "../../interfaces/course";
 import { Button } from "react-bootstrap";
+import { LocalCourse } from "../../interfaces/LocalCourse";
 
 interface CourseEditorProps {
-    onAddCourse: (newCourse: Course) => void;
+    onAddCourse: (newCourse: LocalCourse) => void;
 }
 
 export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
-    const [course, setCourse] = useState<Course>({
+    const [course, setCourse] = useState<LocalCourse>({
         code: "",
         title: "",
         credits: "",
