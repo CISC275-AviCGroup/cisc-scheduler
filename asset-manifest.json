@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/cisc-scheduler/static/css/main.2caf639c.css",
-    "main.js": "/cisc-scheduler/static/js/main.ba520ca5.js",
+    "main.css": "/cisc-scheduler/static/css/main.5995d537.css",
+    "main.js": "/cisc-scheduler/static/js/main.8cee3fcf.js",
     "static/media/logosite.png": "/cisc-scheduler/static/media/logosite.0dd1fee0189fa760d07b.png",
     "index.html": "/cisc-scheduler/index.html",
-    "main.2caf639c.css.map": "/cisc-scheduler/static/css/main.2caf639c.css.map",
-    "main.ba520ca5.js.map": "/cisc-scheduler/static/js/main.ba520ca5.js.map"
+    "main.5995d537.css.map": "/cisc-scheduler/static/css/main.5995d537.css.map",
+    "main.8cee3fcf.js.map": "/cisc-scheduler/static/js/main.8cee3fcf.js.map"
   },
   "entrypoints": [
-    "static/css/main.2caf639c.css",
-    "static/js/main.ba520ca5.js"
+    "static/css/main.5995d537.css",
+    "static/js/main.8cee3fcf.js"
   ]
 }
