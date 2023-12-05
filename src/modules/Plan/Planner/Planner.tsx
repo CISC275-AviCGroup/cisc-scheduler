@@ -3,6 +3,7 @@ import { Plan } from "../../../interfaces/plan";
 import { PlansList } from "../PlansList/PlansList";
 import { AddPlanModal } from "../AddPlanModal/AddPlanModal";
 import { ImportModal } from "../Import/Import";
+import CoursesList from "../../CoursesList/CoursesList";
 
 const sample_plan: Plan[] = [
     {
@@ -15,19 +16,19 @@ const sample_plan: Plan[] = [
                     {
                         code: "108",
                         title: "CISC",
-                        credits: "3",
+                        credits: 3,
                         prerequisites: []
                     },
                     {
                         code: "210",
                         title: "CISC",
-                        credits: "3",
+                        credits: 3,
                         prerequisites: []
                     },
                     {
                         code: "350",
                         title: "CISC",
-                        credits: "3",
+                        credits: 3,
                         prerequisites: []
                     }
                 ],
@@ -39,19 +40,19 @@ const sample_plan: Plan[] = [
                     {
                         code: "38",
                         title: "CISC",
-                        credits: "3",
+                        credits: 3,
                         prerequisites: []
                     },
                     {
                         code: "450",
                         title: "CISC",
-                        credits: "3",
+                        credits: 3,
                         prerequisites: []
                     },
                     {
                         code: "923",
                         title: "CISC",
-                        credits: "3",
+                        credits: 3,
                         prerequisites: []
                     }
                 ],
@@ -136,6 +137,7 @@ export const Planners = () => {
                 importModal={showImportfileModal}
                 savePlan={savePlans}
             ></PlansList>
+            <CoursesList />
 
             <ImportModal
                 show={showImportModal}
