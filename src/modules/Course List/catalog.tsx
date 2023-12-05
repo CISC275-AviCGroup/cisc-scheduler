@@ -1,6 +1,9 @@
 /* eslint-disable no-extra-parens */
+// CoursesList.jsx
 import React, { useState, useEffect } from "react";
 import "./catalog.css";
+import catalogData from "./catalog.json";
+
 interface Courses {
     code: string;
     name: string;
@@ -11,24 +14,47 @@ interface Courses {
     breadth: string;
     typ: string;
 }
+export type courseData = {
+    code: string;
+    name: string;
+    descr: string;
+    credits: string;
+    preReq: string;
+    restrict: string;
+    breadth: string;
+    typ: string;
+};
+
+const convertToCourses = (data: Record<string, courseData>): Courses[] => {
+    const coursesArray: Courses[] = [];
+
+    for (const code in data) {
+        if (Object.prototype.hasOwnProperty.call(data, code)) {
+            const courseData: Record<string, string> = data[code];
+            const { code: courseCode, ...rest } = courseData;
+            const course: Courses = {
+                code: courseCode,
+                name: rest.name,
+                descr: rest.descr,
+                credits: rest.credits,
+                preReq: rest.preReq,
+                restrict: rest.restrict,
+                breadth: rest.breadth,
+                typ: rest.typ
+            };
+            coursesArray.push(course);
+        }
+    }
+
+    return coursesArray;
+};
 
 const CoursesList: React.FC = () => {
     const [courses, setCourses] = useState<Courses[]>([]);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(
-                    "src/modules/CourseEditor/catalog.json"
-                );
-                const data = await response.json();
-                setCourses(Object.values(data));
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        };
-
-        fetchData();
+        const coursesArray = convertToCourses(catalogData);
+        setCourses(coursesArray);
     }, []);
 
     return (
@@ -51,4 +77,5 @@ const CoursesList: React.FC = () => {
         </div>
     );
 };
+
 export default CoursesList;
