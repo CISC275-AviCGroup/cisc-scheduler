@@ -11,7 +11,7 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
     const [course, setCourse] = useState<LocalCourse>({
         code: "",
         title: "",
-        credits: "",
+        credits: 0,
         prerequisites: []
     });
     const isCourseValid = () => {
@@ -33,7 +33,7 @@ export const CourseEditor: React.FC<CourseEditorProps> = ({ onAddCourse }) => {
             setCourse({
                 code: "0",
                 title: "",
-                credits: "0",
+                credits: 0,
                 prerequisites: []
             });
         } else {

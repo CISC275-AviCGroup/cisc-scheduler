@@ -11,7 +11,7 @@ const sample_Semester: Semester[] = [
             {
                 code: "108",
                 title: "CISC",
-                credits: "3",
+                credits: 3,
                 prerequisites: []
             }
         ],
