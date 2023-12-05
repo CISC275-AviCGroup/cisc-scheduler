@@ -152,7 +152,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (124 ms)
+  ✕ renders the course name somewhere (116 ms)
 
   ● renders the course name somewhere
 
@@ -193,7 +193,7 @@ FAIL src/modules/App/App.test.tsx
 ---------------------------|---------|----------|---------|---------|-------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------|---------|----------|---------|---------|-------------------
-All files                  |    4.14 |        0 |    1.25 |    4.26 |                   
+All files                  |    4.04 |        0 |    1.21 |    4.16 |                   
  assets/data               |       0 |      100 |     100 |       0 |                   
   CourseData.ts            |       0 |      100 |     100 |       0 | 1                 
  interfaces                |       0 |        0 |       0 |       0 |                   
@@ -204,7 +204,7 @@ All files                  |    4.14 |        0 |    1.25 |    4.26 |
   semester.ts              |       0 |        0 |       0 |       0 |                   
  modules                   |       0 |      100 |       0 |       0 |                   
   Plan.tsx                 |       0 |      100 |       0 |       0 | 9-43              
-  SemesterList.tsx         |       0 |      100 |       0 |       0 | 15-34             
+  SemesterList.tsx         |       0 |      100 |       0 |       0 | 15-33             
  modules/AddSemesterModal  |       0 |      100 |       0 |       0 |                   
   AddSemesterModal.tsx     |       0 |      100 |       0 |       0 | 10-89             
  modules/App               |     100 |      100 |     100 |     100 |                   
@@ -227,9 +227,9 @@ All files                  |    4.14 |        0 |    1.25 |    4.26 |
  modules/Plan/PlanEdit     |       0 |        0 |       0 |       0 |                   
   PlanEdit.tsx             |       0 |        0 |       0 |       0 |                   
  modules/Plan/PlanExpanded |       0 |        0 |       0 |       0 |                   
-  PlanExpanded.tsx         |       0 |        0 |       0 |       0 | 21-98             
+  PlanExpanded.tsx         |       0 |        0 |       0 |       0 | 22-108            
  modules/Plan/PlanView     |       0 |      100 |       0 |       0 |                   
-  PlanView.tsx             |       0 |      100 |       0 |       0 | 16-28             
+  PlanView.tsx             |       0 |      100 |       0 |       0 | 14-26             
  modules/Plan/Planner      |       0 |        0 |       0 |       0 |                   
   Planner.tsx              |       0 |        0 |       0 |       0 | 6-91              
  modules/Plan/PlansList    |       0 |      100 |       0 |       0 |                   
@@ -242,5 +242,5 @@ All files                  |    4.14 |        0 |    1.25 |    4.26 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.132 s
+Time:        3.067 s
 Ran all test suites.
