@@ -4,8 +4,6 @@ import { Plan } from "../../../interfaces/plan";
 import { PlanExpanded } from "../../Plan/PlanExpanded/PlanExpanded";
 //import { PlanEdit } from "../PlanEdit/PlanEdit";
 
-/* import "./QuizView.css";
- */
 interface PlanViewProps {
     plan: Plan;
     editPlan: (planTitle: string, plan: Plan) => void;

@@ -27,7 +27,6 @@ export const SemesterList = ({
     /*const resetSemesterView = () => {
         setSemesterID(null);
     };*/
-
     return (
         <div className="semester_list">
             {semesters.map((semester: Semester) => (
