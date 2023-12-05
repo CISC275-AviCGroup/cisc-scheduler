@@ -8,12 +8,13 @@ import { Plan } from "../../../interfaces/plan";
 //import { QuestionEdit } from "../../../QuestionEdit";
 
 import "./PlanExpanded.css";
+import Semesters from "../../Semesters/Semesters";
 //import { QuizQuestion } from "./QuizQuestion";
 
 interface planExpandedProps {
     plan: Plan;
     editPlan: (planTitle: string, plan: Plan) => void;
-    deletePlan: (planTitle: string) => void;
+    deletePlan: (SemesterTitle: string) => void;
     resetView: () => void;
     switchEdit: () => void;
 }
@@ -21,7 +22,6 @@ interface planExpandedProps {
 export const PlanExpanded = ({
     plan,
     editPlan,
-    deletePlan,
     resetView,
     switchEdit
 }: planExpandedProps) => {
@@ -42,6 +42,16 @@ export const PlanExpanded = ({
 
     const handleEditSemester = (title: string) => {
         return;
+    };
+
+    const deletePlan = (semesterTitle: string) => {
+        const updatedSemesters = plan.semesters.filter(
+            (s: Semester): boolean => semesterTitle !== s.title
+        );
+
+        // Assuming you are using React Hooks to manage state
+        // Update the state with the new array
+        editPlan(plan.title, { ...plan, semesters: updatedSemesters });
     };
 
     return (
