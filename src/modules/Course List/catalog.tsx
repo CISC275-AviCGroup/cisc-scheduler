@@ -1,67 +1,25 @@
 /* eslint-disable no-extra-parens */
-// CoursesList.jsx
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./catalog.css";
-import catalogData from "./catalog.json";
-
-interface Courses {
-    code: string;
-    name: string;
-    descr: string;
-    credits: string;
-    preReq: string;
-    restrict: string;
-    breadth: string;
-    typ: string;
-}
-export type courseData = {
-    code: string;
-    name: string;
-    descr: string;
-    credits: string;
-    preReq: string;
-    restrict: string;
-    breadth: string;
-    typ: string;
-};
-
-const convertToCourses = (data: Record<string, courseData>): Courses[] => {
-    const coursesArray: Courses[] = [];
-
-    for (const code in data) {
-        if (Object.prototype.hasOwnProperty.call(data, code)) {
-            const courseData: Record<string, string> = data[code];
-            const { code: courseCode, ...rest } = courseData;
-            const course: Courses = {
-                code: courseCode,
-                name: rest.name,
-                descr: rest.descr,
-                credits: rest.credits,
-                preReq: rest.preReq,
-                restrict: rest.restrict,
-                breadth: rest.breadth,
-                typ: rest.typ
-            };
-            coursesArray.push(course);
-        }
-    }
-
-    return coursesArray;
-};
+import "../../assets/data/catalog.json";
+import courseData from "../../assets/data/CourseData";
+import { DataCourse } from "../../interfaces/DataCourse";
 
 const CoursesList: React.FC = () => {
-    const [courses, setCourses] = useState<Courses[]>([]);
+    const [courses, setCourses] = React.useState<DataCourse[]>([]);
 
-    useEffect(() => {
-        const coursesArray = convertToCourses(catalogData);
-        setCourses(coursesArray);
+    React.useEffect(() => {
+        const parsedData = JSON.parse(
+            courseData as unknown as string
+        ) as DataCourse[];
+        setCourses(parsedData);
     }, []);
 
     return (
         <div>
             <h1>Courses List</h1>
             <ul>
-                {courses.map((course) => (
+                {courses.map((course: DataCourse) => (
                     <li key={course.code}>
                         <strong>{course.name}</strong>
                         <p>Code: {course.code}</p>

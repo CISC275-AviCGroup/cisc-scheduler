@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import * as data from "../../assets/data/links.json";
 import { NavLink } from "react-router-dom";
+import { Container, Navbar } from "react-bootstrap";
+import logo from "../../assets/images/logosite.png";
+
 const linksString = JSON.stringify(data);
 const links = JSON.parse(linksString).links;
 
@@ -31,9 +34,19 @@ const Links = ({ links }: LinkProps) => {
 const Nav = () => {
     console.log(links);
     return (
-        <nav className={styles.navbar}>
-            <Links links={links} />
-        </nav>
+        <Navbar className={`${styles.navbar} bg-body-tertiary`} expand="lg">
+            <Container>
+                <Navbar.Brand className="h-100" href="/">
+                    <img
+                        width="50"
+                        height="50"
+                        className="d-inline-block align-top"
+                        src={logo}
+                    />
+                </Navbar.Brand>
+                <Links links={links} />
+            </Container>
+        </Navbar>
     );
 };
 

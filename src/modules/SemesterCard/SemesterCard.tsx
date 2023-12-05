@@ -2,7 +2,7 @@ import React from "react";
 import { Semester } from "../../interfaces/semester";
 import "./SemesterCard.css";
 import { Button } from "react-bootstrap";
-import { Course } from "../../interfaces/course";
+import { LocalCourse } from "../../interfaces/LocalCourse";
 
 interface semesterCardProps {
     semester: Semester;
@@ -32,7 +32,7 @@ export const SemesterCard = ({
                 </p>
             </div>
             {semester.courses.map(
-                (course: Course) =>
+                (course: LocalCourse) =>
                     course.title + course.code + " - " + course.credits
             )}
             <Button
