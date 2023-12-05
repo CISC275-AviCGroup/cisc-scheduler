@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Plan } from "../../../interfaces/plan";
 import { PlansList } from "../PlansList/PlansList";
 import { AddPlanModal } from "../AddPlanModal/AddPlanModal";
+import { ImportModal } from "../Import/Import";
 
 const sample_plan: Plan[] = [
     {
@@ -64,6 +65,7 @@ const sample_plan: Plan[] = [
 export const Planners = () => {
     const [plans, setPlans] = useState<Plan[]>(sample_plan);
     const [showAddModal, setShowAddModal] = useState(false);
+    const [showImportModal, setShowImportModal] = useState(false);
 
     function editPlan(pTitle: string, newPlan: Plan) {
         setPlans(
@@ -85,6 +87,42 @@ export const Planners = () => {
         setPlans(plans.filter((p: Plan): boolean => pTitle !== p.title));
     }
 
+    function savePlans() {
+        // Convert list of dictionaries to a JSON string
+        const jsonString = JSON.stringify(plans, null, 2); // 2 is for indentation
+
+        // Create a Blob containing the JSON data
+        const blob = new Blob([jsonString], { type: "text/plain" });
+
+        // Create a temporary URL for the Blob
+        const url = window.URL.createObjectURL(blob);
+
+        // Create a link element
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "Saved_Plans";
+
+        // Simulate a click to trigger the download
+        document.body.appendChild(link);
+        link.click();
+
+        // Cleanup
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+    }
+
+    function importPlans(text: string) {
+        try {
+            const parsedData = JSON.parse(text);
+            setPlans(parsedData);
+        } catch (error) {
+            console.error("Error parsing JSON:", error);
+        }
+    }
+
+    const showImportfileModal = () => setShowImportModal(true);
+    const closeImportModal = () => setShowImportModal(false);
+
     const handleShowModal = () => setShowAddModal(true);
     const handleCloseModal = () => setShowAddModal(false);
 
@@ -95,7 +133,15 @@ export const Planners = () => {
                 editPlan={editPlan}
                 deletePlan={deletePlan}
                 showModal={handleShowModal}
+                importModal={showImportfileModal}
+                savePlan={savePlans}
             ></PlansList>
+
+            <ImportModal
+                show={showImportModal}
+                handleClose={closeImportModal}
+                importPlans={importPlans}
+            ></ImportModal>
 
             <AddPlanModal
                 show={showAddModal}
