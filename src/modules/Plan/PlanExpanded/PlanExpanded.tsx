@@ -143,8 +143,8 @@ export const PlanExpanded = ({
                     {openSemesters.includes(semester.title) && (
                         <ul>
                             {semester.courses.map((course, index) => (
-                                <li key={index}>
-                                    {course.title + course.code}
+                                <li className="courseTable" key={index}>
+                                    {course.title + " " + course.code}
                                 </li>
                             ))}
                         </ul>
