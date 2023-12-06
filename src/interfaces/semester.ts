@@ -3,8 +3,10 @@
 import { LocalCourse } from "./LocalCourse";
 
 export interface Semester {
-    // title of the semester (season-year)
+    // title of the semester (season)
     title: string;
+    //year
+    year: string;
     // list of courses in a given semester
     courses: LocalCourse[];
     // total credits in a given semester

@@ -11,7 +11,8 @@ const sample_plan: Plan[] = [
         body: "test plan",
         semesters: [
             {
-                title: "Fall 2024",
+                title: "Fall",
+                year: "2023",
                 courses: [
                     {
                         code: "108",
@@ -35,7 +36,8 @@ const sample_plan: Plan[] = [
                 tot_creds: 9
             },
             {
-                title: "Spring 2024",
+                title: "Spring",
+                year: "2024",
                 courses: [
                     {
                         code: "38",
