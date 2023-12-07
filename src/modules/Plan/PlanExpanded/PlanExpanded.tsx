@@ -82,7 +82,7 @@ export const PlanExpanded = ({
                 <thead>
                     <tr>
                         <th style={{ paddingLeft: "8px" }}>Semesters</th>
-                        <th style={{ paddingLeft: "80px" }}>Actions</th>
+                        <th style={{ paddingLeft: "58px" }}>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -92,23 +92,34 @@ export const PlanExpanded = ({
                                 onClick={() =>
                                     handleSemesterClick(semester.title)
                                 }
-                                style={{ padding: "12px" }}
+                                // eslint-disable-next-line prettier/prettier
+                                style={{
+                                    padding: "10px",
+                                    paddingRight: "25px"
+                                }}
                             >
                                 {semester.title + " " + semester.year}
                             </td>
                             <td>
                                 <button
-                                    className="add_btn"
-                                    onClick={() =>
-                                        handleEditSemester(semester.title)
-                                    }
-                                    style={{ alignItems: "right" }}
+                                    className="edit_btn"
+                                    onClick={(event) => {
+                                        event.stopPropagation(); // Prevent propagation
+                                        handleEditSemester(semester.title);
+                                    }}
+                                    style={{
+                                        alignItems: "right",
+                                        marginRight: "10px"
+                                    }}
                                 >
                                     Edit
                                 </button>
                                 <button
                                     className="add_btn"
-                                    onClick={() => deletePlan(semester.title)}
+                                    onClick={(event) => {
+                                        event.stopPropagation(); // Prevent propagation
+                                        deletePlan(semester.title);
+                                    }}
                                 >
                                     Delete
                                 </button>
@@ -119,7 +130,13 @@ export const PlanExpanded = ({
                         <td></td>
                         <td>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button onClick={handleShowModal}>
+                            <button
+                                onClick={(event) => {
+                                    event.stopPropagation(); // Prevent propagation
+                                    handleShowModal();
+                                }}
+                                style={{ marginLeft: "-20px" }}
+                            >
                                 Add Semester
                             </button>
                             <AddSemesterModal
