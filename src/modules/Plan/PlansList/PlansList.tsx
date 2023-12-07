@@ -12,13 +12,17 @@ interface plansListProps {
     editPlan: (pTitle: string, newPlan: Plan) => void;
     deletePlan: (pTitle: string) => void;
     showModal: () => void;
+    savePlan: () => void;
+    importModal: () => void;
 }
 
 export const PlansList = ({
     plans,
     editPlan,
     deletePlan,
-    showModal
+    showModal,
+    savePlan,
+    importModal
 }: plansListProps) => {
     const [planID, setPlanID] = useState<string[]>([]);
     const [showPlan, setShowPlan] = useState<boolean>(false);
@@ -30,7 +34,15 @@ export const PlansList = ({
 
     const handlePlanView = (title: string) => {
         handleShowPlan;
-        setPlanID([...planID, title]);
+        if (planID.includes(title)) {
+            // If title exists, remove it from the array
+            const updatedPlanID = planID.filter((id) => id !== title);
+            setPlanID(updatedPlanID);
+        } else {
+            // If title doesn't exist, add it to the array
+            setPlanID([...planID, title]);
+        }
+        //setPlanID([...planID, title]);
     };
 
     const resetPlanView = () => {
@@ -40,6 +52,12 @@ export const PlansList = ({
     return (
         <div className="plan_list">
             <div className="plan_list">
+                <Button className="import_btn" onClick={importModal}>
+                    Import
+                </Button>
+                <Button className="save_btn" onClick={savePlan}>
+                    Save
+                </Button>
                 {plans.map((plan: Plan) => (
                     <div key={plan.title}>
                         <PlanCard
