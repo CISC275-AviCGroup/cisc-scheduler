@@ -2,21 +2,22 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./modules/App/App";
 import Planners from "./modules/Plan/Planner/Planner";
+import Introduction from "./modules/Introduction/Introduction";
+import { Layout } from "./modules/App/layout/Layout";
+
 const router = createBrowserRouter(
     [
         {
+            children: [
+                {
+                    element: <Planners />,
+                    path: "planner"
+                },
+                { element: <Introduction />, path: "/" }
+            ],
             path: "/",
-            element: <App />
-        },
-        {
-            path: "planner",
-            element: <Planners />
-        },
-        {
-            path: "intro",
-            element: <span></span>
+            element: <Layout />
         }
     ],
     {

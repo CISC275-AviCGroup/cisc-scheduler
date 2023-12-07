@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 
-interface addPlanModalProps {
+interface addSemesterModalProps {
     show: boolean;
     handleClose: () => void;
-    addSemester: (title: string) => void;
+    addSemester: (title: string, year: string) => void;
 }
 
 export const AddSemesterModal = ({
     show,
     handleClose,
     addSemester
-}: addPlanModalProps) => {
+}: addSemesterModalProps) => {
     const [title, setTitle] = useState<string>("Fall");
     const [year, setYear] = useState<string>("2023");
 
     const saveChanges = () => {
-        addSemester(title);
+        console.log("please work");
+        addSemester(title, year);
         setTitle("Example Semester");
         setYear("2023");
         handleClose();
@@ -75,8 +76,8 @@ export const AddSemesterModal = ({
                             type="number"
                             value={year}
                             onChange={(
-                                event: React.ChangeEvent<HTMLInputElement>
-                            ) => setYear(event.target.value)}
+                                e: React.ChangeEvent<HTMLInputElement>
+                            ) => setYear(e.target.value)}
                         />
                     </Form.Group>
                 </Modal.Body>

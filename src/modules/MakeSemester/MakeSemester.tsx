@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Semester } from "../../interfaces/semester";
 import { CourseEditor } from "../CourseEditor/CourseEditor";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
-import { Course } from "../../interfaces/course";
 import "./MakeSemester.css";
 import "./App.css";
+import { LocalCourse } from "../../interfaces/LocalCourse";
 
 interface MakeSemesterProps {
     onAddSemester: (newSemester: Semester) => void;
@@ -15,11 +15,12 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
 }) => {
     const [semester, setSemester] = useState<Semester>({
         title: "",
+        year: "",
         courses: [],
         tot_creds: 0
     });
 
-    const addCourseToSemester = (newCourse: Course) => {
+    const addCourseToSemester = (newCourse: LocalCourse) => {
         setSemester({
             ...semester,
             courses: [...semester.courses, newCourse],
@@ -27,7 +28,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
             title: semester.title
         });
     };
-    const removeCourseFromSemester = (courseToRemove: Course) => {
+    const removeCourseFromSemester = (courseToRemove: LocalCourse) => {
         const updatedCourses = semester.courses.filter(
             (course) => course !== courseToRemove
         );
@@ -49,6 +50,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
         onAddSemester(semester);
         setSemester({
             title: "",
+            year: "",
             courses: [],
             tot_creds: 0
         });
