@@ -34,7 +34,15 @@ export const PlansList = ({
 
     const handlePlanView = (title: string) => {
         handleShowPlan;
-        setPlanID([...planID, title]);
+        if (planID.includes(title)) {
+            // If title exists, remove it from the array
+            const updatedPlanID = planID.filter((id) => id !== title);
+            setPlanID(updatedPlanID);
+        } else {
+            // If title doesn't exist, add it to the array
+            setPlanID([...planID, title]);
+        }
+        //setPlanID([...planID, title]);
     };
 
     const resetPlanView = () => {
