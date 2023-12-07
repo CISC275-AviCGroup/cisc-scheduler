@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Planners from "./modules/Plan/Planner/Planner";
 import Introduction from "./modules/Introduction/Introduction";
 import { Layout } from "./modules/App/layout/Layout";
+import CoursesList from "./modules/CoursesList/CoursesList";
 
 const router = createBrowserRouter(
     [
@@ -14,7 +15,8 @@ const router = createBrowserRouter(
                     element: <Planners />,
                     path: "planner"
                 },
-                { element: <Introduction />, path: "/" }
+                { element: <Introduction />, path: "/" },
+                { element: <CoursesList />, path: "courselist" }
             ],
             path: "/",
             element: <Layout />

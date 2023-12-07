@@ -12,8 +12,6 @@ function App(): JSX.Element {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Introduction />} />
-                    <Route path="intro" element={<div>{"hello"}</div>} />
-                    <Route path="planner" element={<div>{"hi there"}</div>} />
                 </Route>
             </Routes>
             {/* <div className="scheduler">
