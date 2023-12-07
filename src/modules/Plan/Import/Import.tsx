@@ -37,7 +37,7 @@ export const ImportModal = ({
     };
 
     return (
-        <Modal show={show}>
+        <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Import File</Modal.Title>
             </Modal.Header>
