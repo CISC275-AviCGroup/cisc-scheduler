@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Semester } from "../../../interfaces/semester";
 import { Plan } from "../../../interfaces/plan";
+import { AddSemesterModal } from "../../AddSemesterModal/AddSemesterModal";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 //import { QuestionEdit } from "../../../QuestionEdit";
 
@@ -44,6 +45,24 @@ export const PlanExpanded = ({
         return;
     };
 
+    function addSemester(title: string, year: string) {
+        const newSemester: Semester = {
+            title: title,
+            year: year,
+            courses: [],
+            tot_creds: 0
+        };
+
+        // Update the plan with the new semester
+        editPlan(plan.title, {
+            ...plan,
+            semesters: [...plan.semesters, newSemester]
+        });
+
+        // Close the modal or perform any other necessary actions
+        handleCloseModal();
+    }
+
     const deletePlan = (semesterTitle: string) => {
         const updatedSemesters = plan.semesters.filter(
             (s: Semester): boolean => semesterTitle !== s.title
@@ -53,7 +72,10 @@ export const PlanExpanded = ({
         // Update the state with the new array
         editPlan(plan.title, { ...plan, semesters: updatedSemesters });
     };
+    const [showAddModal, setShowAddModal] = useState(false);
 
+    const handleShowModal = () => setShowAddModal(true);
+    const handleCloseModal = () => setShowAddModal(false);
     return (
         <>
             <table>
@@ -72,7 +94,7 @@ export const PlanExpanded = ({
                                 }
                                 style={{ padding: "12px" }}
                             >
-                                {semester.title}
+                                {semester.title + " " + semester.year}
                             </td>
                             <td>
                                 <button
@@ -93,6 +115,22 @@ export const PlanExpanded = ({
                             </td>
                         </tr>
                     ))}
+                    <tr>
+                        <td></td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button onClick={handleShowModal}>
+                                Add Semester
+                            </button>
+                            <AddSemesterModal
+                                show={showAddModal}
+                                handleClose={handleCloseModal}
+                                addSemester={(title: string, year: string) =>
+                                    addSemester(title, year)
+                                }
+                            ></AddSemesterModal>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -100,13 +138,13 @@ export const PlanExpanded = ({
             {plan.semesters.map((semester) => (
                 <div key={semester.title}>
                     <h2 onClick={() => handleSemesterClick(semester.title)}>
-                        {semester.title}
+                        {semester.title + " " + semester.year}
                     </h2>
                     {openSemesters.includes(semester.title) && (
                         <ul>
                             {semester.courses.map((course, index) => (
-                                <li key={index}>
-                                    {course.title + course.code}
+                                <li className="courseTable" key={index}>
+                                    {course.title + " " + course.code}
                                 </li>
                             ))}
                         </ul>

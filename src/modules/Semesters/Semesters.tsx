@@ -6,12 +6,13 @@ import { AddSemesterModal } from "../AddSemesterModal/AddSemesterModal";
 
 const sample_Semester: Semester[] = [
     {
-        title: "Fall 2023",
+        title: "Fall",
+        year: "2023",
         courses: [
             {
                 code: "108",
                 title: "CISC",
-                credits: "3",
+                credits: 3,
                 prerequisites: []
             }
         ],
@@ -22,7 +23,6 @@ const sample_Semester: Semester[] = [
 export const Semesters = () => {
     const [semesters, setSemesters] = useState<Semester[]>(sample_Semester);
     const [showAddModal, setShowAddModal] = useState(false);
-
     /*function editSemester(sTitle: string, newSemester: Semester) {
         setSemesters(
             semesters.map(
@@ -32,9 +32,10 @@ export const Semesters = () => {
         );
     }*/
 
-    function addSemester(title: string) {
+    function addSemester(title: string, year: string) {
         const newSemester: Semester = {
             title: title,
+            year: year,
             courses: [],
             tot_creds: 0
         };

@@ -15,6 +15,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
 }) => {
     const [semester, setSemester] = useState<Semester>({
         title: "",
+        year: "",
         courses: [],
         tot_creds: 0
     });
@@ -49,6 +50,7 @@ export const MakeSemester: React.FC<MakeSemesterProps> = ({
         onAddSemester(semester);
         setSemester({
             title: "",
+            year: "",
             courses: [],
             tot_creds: 0
         });
