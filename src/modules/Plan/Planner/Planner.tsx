@@ -3,7 +3,6 @@ import { Plan } from "../../../interfaces/plan";
 import { PlansList } from "../PlansList/PlansList";
 import { AddPlanModal } from "../AddPlanModal/AddPlanModal";
 import { ImportModal } from "../Import/Import";
-import CoursesList from "../../CoursesList/CoursesList";
 
 const sample_plan: Plan[] = [
     {
@@ -139,7 +138,6 @@ export const Planners = () => {
                 importModal={showImportfileModal}
                 savePlan={savePlans}
             ></PlansList>
-            <CoursesList />
 
             <ImportModal
                 show={showImportModal}

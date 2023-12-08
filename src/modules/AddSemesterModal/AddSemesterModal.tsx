@@ -31,7 +31,9 @@ export const AddSemesterModal = ({
                 </Modal.Header>
                 <Modal.Body>
                     <Form.Group controlId="formSemesterId">
-                        <Form.Label>Semester: </Form.Label>
+                        <Form.Label style={{ margin: "10px" }}>
+                            Semester:{" "}
+                        </Form.Label>
                         <Form.Check
                             inline
                             type="radio"
