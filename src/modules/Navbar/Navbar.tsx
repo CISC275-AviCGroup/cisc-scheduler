@@ -36,7 +36,7 @@ const Nav = () => {
     return (
         <Navbar className={`${styles.navbar} bg-body-tertiary`} expand="lg">
             <Container>
-                <Navbar.Brand className="h-100" href="/">
+                <Navbar.Brand className="h-100" href="/cisc-scheduler">
                     <img
                         width="50"
                         height="50"
