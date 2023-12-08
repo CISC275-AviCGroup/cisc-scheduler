@@ -256,21 +256,41 @@ export const EditSemesterModal = ({
                                     ))}
                                 </tbody>
                             </table>
-                            {courses.map((course, index) => (
-                                <tr key={index}>
-                                    <td>{course.code}</td>
-                                    <td>{course.title}</td>
-                                    <td>{course.credits}</td>
-                                    <td>{course.prerequisites.join(", ")}</td>
-                                    <td>
-                                        <button
-                                            onClick={() => removeCourse(index)}
-                                        >
-                                            Remove
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
+                            <h2>Course Table</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Title</th>
+                                        <th>Credits</th>
+                                        <th>Prerequisites</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {courses.map((course, index) => (
+                                        <tr key={index}>
+                                            <td>{course.code}</td>
+                                            <td>{course.title}</td>
+                                            <td>{course.credits}</td>
+                                            <td>
+                                                {course.prerequisites.join(
+                                                    ", "
+                                                )}
+                                            </td>
+                                            <td>
+                                                <button
+                                                    onClick={() =>
+                                                        removeCourse(index)
+                                                    }
+                                                >
+                                                    Remove
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                         </tbody>
                     </table>
                 </Modal.Body>
