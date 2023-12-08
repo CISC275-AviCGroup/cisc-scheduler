@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from "react";
 import { Button, Modal } from "react-bootstrap";
+import "./Import.css";
 
 interface ImportProps {
     show: boolean;
