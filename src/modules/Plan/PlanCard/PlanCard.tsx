@@ -27,16 +27,16 @@ export const PlanCard = ({
     return (
         <div
             className="plan_view_card"
-            onClick={() => {
+            /* onClick={() => {
                 handleClick(plan.title);
-            }}
+            }} */
         >
             <div className="d-flex align-items-baseline">
                 <h3
                     className="title"
-                    /* onClick={() => {
+                    onClick={() => {
                         handleClick(plan.title);
-                    }} */
+                    }}
                 >
                     {plan.title}
                 </h3>
