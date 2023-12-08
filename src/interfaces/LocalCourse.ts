@@ -1,7 +1,7 @@
 /**
  * Course type within the app, from processing the data and mapping it to a type
  */
-export type LocalCourse = {
+export interface LocalCourse {
     /**
      * The # of credits in the course
      */
@@ -18,4 +18,4 @@ export type LocalCourse = {
      * The title of the course
      */
     title: string;
-};
+}
