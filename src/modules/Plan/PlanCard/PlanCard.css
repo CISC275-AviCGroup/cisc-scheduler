@@ -15,7 +15,7 @@
 .delete_button {
     display: none;
     position: absolute;
-    bottom: 1rem;
+    top: 1rem;
     right: 1rem;
     background-color: #ff0000;
     color: #ffffff;
