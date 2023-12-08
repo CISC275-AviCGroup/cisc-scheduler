@@ -153,49 +153,6 @@ export const EditSemesterModal = ({
                 <Modal.Body>
                     <Form>
                         <Form.Group controlId="seasonSelect">
-                            <Form.Label style={{ paddingRight: "10px" }}>
-                                Select Season:{" "}
-                            </Form.Label>
-                            <Form.Check
-                                inline
-                                type="radio"
-                                name="response"
-                                onChange={(e) => setTitle(e.target.value)}
-                                id="Fall"
-                                label="Fall"
-                                value="Fall"
-                                checked={title === "Fall"}
-                            />
-                            <Form.Check
-                                inline
-                                type="radio"
-                                name="response"
-                                onChange={(e) => setTitle(e.target.value)}
-                                id="Winter"
-                                label="Winter"
-                                value="Winter"
-                                checked={title === "Winter"}
-                            />
-                            <Form.Check
-                                inline
-                                type="radio"
-                                name="response"
-                                onChange={(e) => setTitle(e.target.value)}
-                                id="Spring"
-                                label="Spring"
-                                value="Spring"
-                                checked={title === "Spring"}
-                            />
-                            <Form.Check
-                                inline
-                                type="radio"
-                                name="response"
-                                onChange={(e) => setTitle(e.target.value)}
-                                id="Summer"
-                                label="Summer"
-                                value="Summer"
-                                checked={title === "Summer"}
-                            />
                             <Form.Control
                                 type="number"
                                 value={year}
@@ -222,8 +179,8 @@ export const EditSemesterModal = ({
                                                 semesterCourse.code ===
                                                 course.code
                                         )
-                                            ? "Taken"
-                                            : "Not Taken"}
+                                            ? "Taken ✅"
+                                            : "Not Taken ❌"}
                                     </td>
                                 </tr>
                             ))}
