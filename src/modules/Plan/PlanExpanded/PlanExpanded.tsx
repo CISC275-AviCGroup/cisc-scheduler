@@ -182,6 +182,7 @@ export const PlanExpanded = ({
                                 </button>
 
                                 <EditSemesterModal
+                                    semester={semester}
                                     show={showEditModal}
                                     handleClose={handleEditcloseModal}
                                 ></EditSemesterModal>
