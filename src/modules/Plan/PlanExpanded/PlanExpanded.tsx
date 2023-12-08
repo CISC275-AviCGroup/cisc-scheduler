@@ -8,7 +8,7 @@ import { AddSemesterModal } from "../../AddSemesterModal/AddSemesterModal";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 //import { QuestionEdit } from "../../../QuestionEdit";
 
-//import { EditSemesterModal } from "../../Plan/PlanEdit/PlanEdit";
+import { EditSemesterModal } from "../../Plan/PlanEdit/PlanEdit";
 import "./PlanExpanded.css";
 import Semesters from "../../Semesters/Semesters";
 //import { QuizQuestion } from "./QuizQuestion";
@@ -162,6 +162,8 @@ export const PlanExpanded = ({
                             </td>
                             <td
                                 style={{
+                                    display: "flex",
+                                    alignItems: "center",
                                     paddingLeft: "450px"
                                 }}
                             >
@@ -169,7 +171,7 @@ export const PlanExpanded = ({
                                     className="edit_btn"
                                     onClick={(event) => {
                                         event.stopPropagation();
-                                        handleEditSemester(semester.title);
+                                        handleEditshowModal();
                                     }}
                                     style={{
                                         marginRight: "10px",
@@ -178,6 +180,12 @@ export const PlanExpanded = ({
                                 >
                                     Edit
                                 </button>
+
+                                <EditSemesterModal
+                                    show={showEditModal}
+                                    handleClose={handleEditcloseModal}
+                                ></EditSemesterModal>
+
                                 <button
                                     className="delete_btn"
                                     onClick={(event) => {
