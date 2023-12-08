@@ -64,7 +64,7 @@ const CoursesList: React.FC = () => {
                             marginBottom: "20px"
                         }}
                         onMouseOver={(e) => {
-                            e.currentTarget.style.backgroundColor = "yellow";
+                            e.currentTarget.style.backgroundColor = "#fed600";
                         }}
                         onMouseOut={(e) => {
                             e.currentTarget.style.backgroundColor = "white";

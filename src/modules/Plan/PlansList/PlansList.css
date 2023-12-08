@@ -18,7 +18,7 @@
 .add_btn_plan {
     margin-top: 0px;
     padding: 10px 25px;
-    background-color: #003c70;
+    background-color: #00539f;
     align-self: center;
     width: 250px;
     color: #ffffff;
@@ -29,5 +29,5 @@
 }
 
 .add_btn:hover {
-    color: #ffff00;
+    color: #fed600;
 }
