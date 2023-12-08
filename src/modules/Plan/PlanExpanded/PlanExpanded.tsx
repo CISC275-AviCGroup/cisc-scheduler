@@ -21,6 +21,10 @@ interface planExpandedProps {
     switchEdit: () => void;
 }
 
+type EditModalState = {
+    [key: string]: boolean;
+};
+
 export const PlanExpanded = ({
     plan,
     editPlan,
@@ -78,10 +82,21 @@ export const PlanExpanded = ({
     const handleShowModal = () => setShowAddModal(true);
     const handleCloseModal = () => setShowAddModal(false);
 
-    const [showEditModal, setShowEditModal] = useState(false);
+    const [showEditModal, setShowEditModal] = useState<EditModalState>({}); // Object to track modals per semester
 
-    const handleEditshowModal = () => setShowEditModal(true);
-    const handleEditcloseModal = () => setShowEditModal(false);
+    const handleEditshowModal = (semesterTitle: string) => {
+        setShowEditModal((prevState) => ({
+            ...prevState,
+            [semesterTitle]: true // Set the modal for the specified semester to true
+        }));
+    };
+
+    const handleEditcloseModal = (semesterTitle: string) => {
+        setShowEditModal((prevState) => ({
+            ...prevState,
+            [semesterTitle]: false // Set the modal for the specified semester to false
+        }));
+    };
     return (
         <>
             <button
@@ -171,7 +186,7 @@ export const PlanExpanded = ({
                                     className="edit_btn"
                                     onClick={(event) => {
                                         event.stopPropagation();
-                                        handleEditshowModal();
+                                        handleEditshowModal(semester.title);
                                     }}
                                     style={{
                                         marginRight: "10px",
@@ -183,8 +198,12 @@ export const PlanExpanded = ({
 
                                 <EditSemesterModal
                                     semester={semester}
-                                    show={showEditModal}
-                                    handleClose={handleEditcloseModal}
+                                    show={
+                                        showEditModal[semester.title] || false
+                                    }
+                                    handleClose={() =>
+                                        handleEditcloseModal(semester.title)
+                                    }
                                 ></EditSemesterModal>
 
                                 <button
