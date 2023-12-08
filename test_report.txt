@@ -152,7 +152,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (114 ms)
+  ✕ renders the course name somewhere (123 ms)
 
   ● renders the course name somewhere
 
@@ -193,7 +193,7 @@ FAIL src/modules/App/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |    2.56 |        0 |    0.86 |    2.71 |                   
+All files                      |    2.51 |        0 |    0.84 |    2.66 |                   
  src                           |       0 |      100 |     100 |       0 |                   
   CourseData.ts                |       0 |      100 |     100 |       0 | 1                 
  src/assets/data               |       0 |      100 |     100 |       0 |                   
@@ -236,8 +236,8 @@ All files                      |    2.56 |        0 |    0.86 |    2.71 |
   Import.tsx                   |       0 |        0 |       0 |       0 | 10-58             
  src/modules/Plan/PlanCard     |       0 |        0 |       0 |       0 |                   
   PlanCard.tsx                 |       0 |        0 |       0 |       0 | 18-59             
- src/modules/Plan/PlanEdit     |       0 |      100 |       0 |       0 |                   
-  PlanEdit.tsx                 |       0 |      100 |       0 |       0 | 13-81             
+ src/modules/Plan/PlanEdit     |       0 |        0 |       0 |       0 |                   
+  PlanEdit.tsx                 |       0 |        0 |       0 |       0 | 14-222            
  src/modules/Plan/PlanExpanded |       0 |        0 |       0 |       0 |                   
   PlanExpanded.tsx             |       0 |        0 |       0 |       0 | 24-194            
  src/modules/Plan/PlanView     |       0 |      100 |       0 |       0 |                   
@@ -254,5 +254,5 @@ All files                      |    2.56 |        0 |    0.86 |    2.71 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.368 s
+Time:        3.464 s
 Ran all test suites.
