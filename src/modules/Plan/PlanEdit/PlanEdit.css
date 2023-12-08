@@ -1,25 +1,32 @@
 /* Apply border-collapse to collapse the borders */
 table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 /* Style for table headers */
 th {
-  background-color: #f2f2f2; /* Header background color */
-  padding: 10px; /* Padding for header cells */
-  text-align: left;
-  border-bottom: 1px solid #ddd; /* Bottom border for header cells */
+    background-color: #f2f2f2; /* Header background color */
+    padding: 10px; /* Padding for header cells */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Bottom border for header cells */
 }
 
 /* Style for table data cells */
 td {
-  padding: 10px; /* Padding for data cells */
-  text-align: left;
-  border-bottom: 1px solid #ddd; /* Bottom border for data cells */
+    padding: 10px; /* Padding for data cells */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Bottom border for data cells */
 }
 
 /* Add hover effect to table rows */
 tr:hover {
-  background-color: #f5f5f5; /* Hover background color */
+    background-color: #f5f5f5; /* Hover background color */
+}
+tr {
+    transition: transform 0.3s ease;
+}
+
+tr:hover {
+    transform: scale(1.02);
 }

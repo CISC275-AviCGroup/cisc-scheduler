@@ -24,7 +24,7 @@
 .link a:hover {
     text-decoration: none;
     color: rgba(14, 34, 14, 0.8);
-    text-shadow: 0 0 5px rgba(248, 235, 4, 0.8);
+    text-shadow: 0 0 5px #fed600(248, 235, 4, 0.8);
 }
 
 .logo {

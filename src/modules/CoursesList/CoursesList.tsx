@@ -61,6 +61,46 @@ const CoursesList: React.FC = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
+            <ul>
+                {currentCourses.map((course: DataCourse) => (
+                    <li
+                        key={course.code}
+                        style={{
+                            backgroundColor: "white",
+                            border: "1px solid #ccc",
+                            padding: "15px",
+                            marginBottom: "20px"
+                        }}
+                        onMouseOver={(e) => {
+                            e.currentTarget.style.backgroundColor = "#fed600";
+                        }}
+                        onMouseOut={(e) => {
+                            e.currentTarget.style.backgroundColor = "white";
+                        }}
+                    >
+                        <strong>{course.name}</strong>
+                        <p>Code: {course.code}</p>
+                        <p>Description: {course.descr}</p>
+                        <p>Credit: {course.credits}</p>
+                        <p>PreReq: {course.preReq}</p>
+                        <p>Restrict: {course.restrict}</p>
+                        <p>Breadth: {course.breadth}</p>
+                        <p>Type: {course.typ}</p>
+                    </li>
+                ))}
+            </ul>
+            <div>
+                <ul>
+                    {Array.from(
+                        {
+                            length: Math.ceil(
+                                filteredCourses.length / coursesPerPage
+                            )
+                        },
+                        (_, i) => (
+                            <li key={i + 1} onClick={() => paginate(i + 1)}>
+                                {i + 1}
+                            </li>
             <button onClick={handleSort}>
                 Sort by Credits ({sortDirection ? "Asc" : "Desc"})
             </button>

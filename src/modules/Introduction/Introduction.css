@@ -44,7 +44,7 @@ li {
 button {
     margin-top: 0px;
     padding: 10px 25px;
-    background-color: #003c70;
+    background-color: #00539f;
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -53,5 +53,5 @@ button {
 }
 
 button:hover {
-    color: #ffff00;
+    color: #fed600;
 }
