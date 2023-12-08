@@ -16,7 +16,10 @@ export const EditSemesterModal = ({
     show,
     handleClose
 }: EditSemesterModalProps) => {
+    const [title, setTitle] = useState<string>(semester.title);
+    const [year, setYear] = useState<string>(semester.year);
     const [courses, setCourses] = useState<LocalCourse[]>(semester.courses);
+    const [totCreds, setTotCreds] = useState<number>(0);
 
     const coreCsCourses = [
         {
