@@ -140,9 +140,9 @@ export const PlanExpanded = ({
                                                     className="courseTable"
                                                     key={index}
                                                 >
-                                                    {course.title +
-                                                        " " +
-                                                        course.code +
+                                                    {course.code +
+                                                        ": " +
+                                                        course.title +
                                                         " - " +
                                                         course.credits +
                                                         " Credits"}

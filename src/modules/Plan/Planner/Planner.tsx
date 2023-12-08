@@ -14,22 +14,22 @@ const sample_plan: Plan[] = [
                 year: "2023",
                 courses: [
                     {
-                        code: "108",
-                        title: "CISC",
                         credits: 3,
-                        prerequisites: []
+                        code: "CISC 108",
+                        prerequisites: [],
+                        title: "Introduction to Computer Science I"
                     },
                     {
-                        code: "210",
-                        title: "CISC",
                         credits: 3,
-                        prerequisites: []
+                        code: "CISC 181",
+                        prerequisites: ["CISC 108"],
+                        title: "Introduction to Computer Science II"
                     },
                     {
-                        code: "350",
-                        title: "CISC",
                         credits: 3,
-                        prerequisites: []
+                        code: "CISC 210",
+                        prerequisites: ["CISC 108"],
+                        title: "Introduction to Systems Programming"
                     }
                 ],
                 tot_creds: 9
@@ -39,22 +39,22 @@ const sample_plan: Plan[] = [
                 year: "2024",
                 courses: [
                     {
-                        code: "38",
-                        title: "CISC",
                         credits: 3,
-                        prerequisites: []
+                        code: "CISC 498",
+                        prerequisites: [],
+                        title: "Computer Science Senior Design Project I"
                     },
                     {
-                        code: "450",
-                        title: "CISC",
                         credits: 3,
-                        prerequisites: []
+                        code: "CISC 499",
+                        prerequisites: ["CISC 498"],
+                        title: "Computer Science Senior Design Project II"
                     },
                     {
-                        code: "923",
-                        title: "CISC",
                         credits: 3,
-                        prerequisites: []
+                        code: "CISC 355",
+                        prerequisites: [],
+                        title: "Computers, Ethics and Society"
                     }
                 ],
                 tot_creds: 9
