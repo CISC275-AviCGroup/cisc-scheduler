@@ -152,7 +152,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (122 ms)
+  ✕ renders the course name somewhere (117 ms)
 
   ● renders the course name somewhere
 
@@ -193,7 +193,7 @@ FAIL src/modules/App/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |    2.51 |        0 |    0.84 |    2.66 |                   
+All files                      |    2.48 |        0 |    0.81 |    2.62 |                   
  src                           |       0 |      100 |     100 |       0 |                   
   CourseData.ts                |       0 |      100 |     100 |       0 | 1                 
  src/assets/data               |       0 |      100 |     100 |       0 |                   
@@ -237,9 +237,9 @@ All files                      |    2.51 |        0 |    0.84 |    2.66 |
  src/modules/Plan/PlanCard     |       0 |        0 |       0 |       0 |                   
   PlanCard.tsx                 |       0 |        0 |       0 |       0 | 18-59             
  src/modules/Plan/PlanEdit     |       0 |        0 |       0 |       0 |                   
-  PlanEdit.tsx                 |       0 |        0 |       0 |       0 | 14-222            
+  PlanEdit.tsx                 |       0 |        0 |       0 |       0 | 14-245            
  src/modules/Plan/PlanExpanded |       0 |        0 |       0 |       0 |                   
-  PlanExpanded.tsx             |       0 |        0 |       0 |       0 | 24-194            
+  PlanExpanded.tsx             |       0 |        0 |       0 |       0 | 28-213            
  src/modules/Plan/PlanView     |       0 |      100 |       0 |       0 |                   
   PlanView.tsx                 |       0 |      100 |       0 |       0 | 14-26             
  src/modules/Plan/Planner      |       0 |        0 |       0 |       0 |                   
@@ -254,5 +254,5 @@ All files                      |    2.51 |        0 |    0.84 |    2.66 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.619 s
+Time:        3.491 s
 Ran all test suites.
