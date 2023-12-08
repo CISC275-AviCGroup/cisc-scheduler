@@ -152,7 +152,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (117 ms)
+  ✕ renders the course name somewhere (115 ms)
 
   ● renders the course name somewhere
 
@@ -237,7 +237,7 @@ All files                      |    2.48 |        0 |    0.81 |    2.62 |
  src/modules/Plan/PlanCard     |       0 |        0 |       0 |       0 |                   
   PlanCard.tsx                 |       0 |        0 |       0 |       0 | 18-59             
  src/modules/Plan/PlanEdit     |       0 |        0 |       0 |       0 |                   
-  PlanEdit.tsx                 |       0 |        0 |       0 |       0 | 14-245            
+  PlanEdit.tsx                 |       0 |        0 |       0 |       0 | 15-246            
  src/modules/Plan/PlanExpanded |       0 |        0 |       0 |       0 |                   
   PlanExpanded.tsx             |       0 |        0 |       0 |       0 | 28-213            
  src/modules/Plan/PlanView     |       0 |      100 |       0 |       0 |                   
@@ -254,5 +254,5 @@ All files                      |    2.48 |        0 |    0.81 |    2.62 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.491 s
+Time:        3.582 s
 Ran all test suites.
