@@ -21,7 +21,7 @@ export const EditSemesterModal = ({
     const [year, setYear] = useState<string>(semester.year);
     const [courses, setCourses] = useState<LocalCourse[]>(semester.courses);
     const [totCreds, setTotCreds] = useState<number>(0);
-    const [course, setCourse] = useState<string>("TitleCode");
+    const [course, setCourse] = useState<string>("");
 
     function updateSearch(event: React.ChangeEvent<HTMLInputElement>) {
         setCourse(event.target.value);
@@ -32,13 +32,12 @@ export const EditSemesterModal = ({
     ];
 
     const courseAdder = () => {
-        const [code, title] = course.split(" ");
-        if (!courses.some((semesterCourse) => semesterCourse.code === code)) {
+        if (!courses.some((semesterCourse) => semesterCourse.code === course)) {
             const newCourse: LocalCourse = {
                 credits: 0,
-                code: code,
+                code: course,
                 prerequisites: [],
-                title: title
+                title: title // Use the current title state dynamically
             };
             setCourses([...courses, newCourse]);
         }
@@ -53,14 +52,11 @@ export const EditSemesterModal = ({
     return (
         <div>
             <Modal show={show} onHide={handleClose} animation={true} size="xl">
-                <Modal.Header closeButton>
-                    <Modal.Title>Edit Semester</Modal.Title>
-                </Modal.Header>
+                {/* ... (modal header and body) */}
                 <Modal.Body>
                     <table>{/* ... (your course data) */}</table>
                     <h2>Course Table</h2>
                     <table>
-                        {/* ... (your course data) */}
                         <tbody>
                             {courses.map((course, index) => (
                                 <tr key={index}>
@@ -87,6 +83,7 @@ export const EditSemesterModal = ({
                                     type="string"
                                     value={course}
                                     onChange={updateSearch}
+                                    placeholder="Course Code"
                                 />
                             </Form.Group>
                         </div>
@@ -97,12 +94,7 @@ export const EditSemesterModal = ({
                         </div>
                     </div>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary">Save Changes</Button>
-                </Modal.Footer>
+                {/* ... (modal footer) */}
             </Modal>
         </div>
     );
