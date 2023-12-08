@@ -152,7 +152,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (117 ms)
+  ✕ renders the course name somewhere (124 ms)
 
   ● renders the course name somewhere
 
@@ -193,7 +193,7 @@ FAIL src/modules/App/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |    2.76 |        0 |    0.93 |    2.91 |                   
+All files                      |     2.7 |        0 |     0.9 |    2.84 |                   
  src                           |       0 |      100 |     100 |       0 |                   
   CourseData.ts                |       0 |      100 |     100 |       0 | 1                 
  src/assets/data               |       0 |      100 |     100 |       0 |                   
@@ -223,7 +223,7 @@ All files                      |    2.76 |        0 |    0.93 |    2.91 |
  src/modules/CourseEditor      |       0 |        0 |       0 |       0 |                   
   CourseEditor.tsx             |       0 |        0 |       0 |       0 | 10-45             
  src/modules/CoursesList       |       0 |        0 |       0 |       0 |                   
-  CoursesList.tsx              |       0 |        0 |       0 |       0 | 11-73             
+  CoursesList.tsx              |       0 |        0 |       0 |       0 | 11-93             
  src/modules/Introduction      |      20 |      100 |       0 |      20 |                   
   Introduction.tsx             |      20 |      100 |       0 |      20 | 6-12              
  src/modules/MakeSemester      |       0 |      100 |       0 |       0 |                   
@@ -254,5 +254,5 @@ All files                      |    2.76 |        0 |    0.93 |    2.91 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.448 s
+Time:        3.806 s
 Ran all test suites.
