@@ -220,6 +220,42 @@ export const EditSemesterModal = ({
                                     />
                                 </Form.Group>
                             </Form>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Course</th>
+                                        <th style={{ paddingLeft: "100px" }}>
+                                            Status
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {coreCsCourses.map((course) => (
+                                        <tr
+                                            key={
+                                                course.title + " " + course.code
+                                            }
+                                        >
+                                            <td>
+                                                {course.code +
+                                                    ": " +
+                                                    course.title}
+                                            </td>
+                                            <td
+                                                style={{ paddingLeft: "100px" }}
+                                            >
+                                                {courses.some(
+                                                    (semesterCourse) =>
+                                                        semesterCourse.code ===
+                                                        course.code
+                                                )
+                                                    ? "Taken"
+                                                    : "Not Taken"}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                             {courses.map((course, index) => (
                                 <tr key={index}>
                                     <td>{course.code}</td>
