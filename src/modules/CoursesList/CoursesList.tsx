@@ -1,18 +1,17 @@
 /* eslint-disable no-extra-parens */
 import React, { useState, useEffect } from "react";
-import "./CoursesList.module.css";
 import courseData from "../../assets/data/catalog.json";
 import { RawDataCourses } from "../../interfaces/RawDataCourses";
 import { processRawDataCourses } from "../../helpers/data/processRawDataCourses";
 import { DataCourses } from "../../interfaces/DataCourses";
 import { DataCourse } from "../../interfaces/DataCourse";
 import { lookupValue } from "../../helpers/data/lookupValue";
+import "../CoursesList/CoursesList.module.css"; // Import the CSS file
 
 const CoursesList: React.FC = () => {
     const [courses, setCourses] = useState<DataCourses>();
-    const [currentPage, setCurrentPage] = useState<number>(1);
     const [searchTerm, setSearchTerm] = useState<string>("");
-    const coursesPerPage = 15;
+    const [sortDirection, setSortDirection] = useState<boolean>(true); // true: ascending, false: descending
 
     useEffect(() => {
         const parsedData = courseData as RawDataCourses;
@@ -20,33 +19,42 @@ const CoursesList: React.FC = () => {
     }, []);
 
     if (!courses) {
-        return <span />;
+        return <span>Loading...</span>; // Add a loading indicator
     }
 
-    const indexOfLastCourse = currentPage * coursesPerPage;
-    const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
+    const handleSort = () => {
+        setSortDirection(!sortDirection);
+    };
 
-    // Filter courses based on the search term
+    // Filter and sort courses based on the search term and credits
     const filteredCourses = Object.keys(courses)
-        .filter((courseKey) => {
-            const course = lookupValue<DataCourse>(courses, courseKey);
-            return course.filter((subject) =>
-                subject.name.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-        })
         .map((e) => lookupValue<DataCourse>(courses, e))
-        .flat();
+        .flat()
+        .filter((course: DataCourse) => {
+            const searchTermLower = searchTerm.toLowerCase();
+            const nameIncludes = course.name
+                .toLowerCase()
+                .includes(searchTermLower);
+            const codeIncludes = course.code
+                .toLowerCase()
+                .includes(searchTermLower);
+            const descriptionIncludes = course.descr
+                .toLowerCase()
+                .includes(searchTermLower);
 
-    const currentCourses = filteredCourses.slice(
-        indexOfFirstCourse,
-        indexOfLastCourse
-    );
-
-    const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+            return nameIncludes || codeIncludes || descriptionIncludes;
+        })
+        .sort((a, b) => {
+            if (sortDirection) {
+                return parseInt(a.credits) - parseInt(b.credits);
+            } else {
+                return parseInt(b.credits) - parseInt(a.credits);
+            }
+        });
 
     return (
-        <div>
-            <h1>{"Courses List"}</h1>
+        <div style={{ padding: "10px" }}>
+            <h1>Courses List</h1>
             <input
                 type="text"
                 placeholder="Search for a course"
@@ -93,10 +101,55 @@ const CoursesList: React.FC = () => {
                             <li key={i + 1} onClick={() => paginate(i + 1)}>
                                 {i + 1}
                             </li>
+            <button onClick={handleSort}>
+                Sort by Credits ({sortDirection ? "Asc" : "Desc"})
+            </button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Description</th>
+                        <th>Credits</th>
+                        <th>PreReq</th>
+                        <th>Restrict</th>
+                        <th>Breadth</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {filteredCourses.map(
+                        (course: DataCourse, index: number) => (
+                            <tr
+                                key={index}
+                                style={{
+                                    backgroundColor: "white",
+                                    border: "1px solid #ccc",
+                                    padding: "15px",
+                                    marginBottom: "20px"
+                                }}
+                                onMouseOver={(e) => {
+                                    e.currentTarget.style.backgroundColor =
+                                        "yellow";
+                                }}
+                                onMouseOut={(e) => {
+                                    e.currentTarget.style.backgroundColor =
+                                        "white";
+                                }}
+                            >
+                                <td>{course.name}</td>
+                                <td>{course.code}</td>
+                                <td>{course.descr}</td>
+                                <td>{course.credits}</td>
+                                <td>{course.preReq}</td>
+                                <td>{course.restrict}</td>
+                                <td>{course.breadth}</td>
+                                <td>{course.typ}</td>
+                            </tr>
                         )
                     )}
-                </ul>
-            </div>
+                </tbody>
+            </table>
         </div>
     );
 };
