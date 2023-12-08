@@ -152,7 +152,7 @@
       at commitLayoutEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24674:7)
 
 FAIL src/modules/App/App.test.tsx
-  ✕ renders the course name somewhere (124 ms)
+  ✕ renders the course name somewhere (117 ms)
 
   ● renders the course name somewhere
 
@@ -193,7 +193,7 @@ FAIL src/modules/App/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |     2.7 |        0 |     0.9 |    2.84 |                   
+All files                      |    2.64 |        0 |     0.9 |     2.8 |                   
  src                           |       0 |      100 |     100 |       0 |                   
   CourseData.ts                |       0 |      100 |     100 |       0 | 1                 
  src/assets/data               |       0 |      100 |     100 |       0 |                   
@@ -215,7 +215,7 @@ All files                      |     2.7 |        0 |     0.9 |    2.84 |
   Plan.tsx                     |       0 |      100 |       0 |       0 | 9-43              
   SemesterList.tsx             |       0 |      100 |       0 |       0 | 15-33             
  src/modules/AddSemesterModal  |       0 |      100 |       0 |       0 |                   
-  AddSemesterModal.tsx         |       0 |      100 |       0 |       0 | 10-90             
+  AddSemesterModal.tsx         |       0 |      100 |       0 |       0 | 10-92             
  src/modules/App               |     100 |      100 |     100 |     100 |                   
   App.tsx                      |     100 |      100 |     100 |     100 |                   
  src/modules/App/layout        |      50 |      100 |       0 |      50 |                   
@@ -236,10 +236,10 @@ All files                      |     2.7 |        0 |     0.9 |    2.84 |
   Import.tsx                   |       0 |        0 |       0 |       0 | 10-58             
  src/modules/Plan/PlanCard     |       0 |        0 |       0 |       0 |                   
   PlanCard.tsx                 |       0 |        0 |       0 |       0 | 18-59             
- src/modules/Plan/PlanEdit     |       0 |        0 |       0 |       0 |                   
-  PlanEdit.tsx                 |       0 |        0 |       0 |       0 |                   
+ src/modules/Plan/PlanEdit     |       0 |      100 |       0 |       0 |                   
+  PlanEdit.tsx                 |       0 |      100 |       0 |       0 | 9-17              
  src/modules/Plan/PlanExpanded |       0 |        0 |       0 |       0 |                   
-  PlanExpanded.tsx             |       0 |        0 |       0 |       0 | 23-163            
+  PlanExpanded.tsx             |       0 |        0 |       0 |       0 | 24-193            
  src/modules/Plan/PlanView     |       0 |      100 |       0 |       0 |                   
   PlanView.tsx                 |       0 |      100 |       0 |       0 | 14-26             
  src/modules/Plan/Planner      |       0 |        0 |       0 |       0 |                   
@@ -254,5 +254,5 @@ All files                      |     2.7 |        0 |     0.9 |    2.84 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.806 s
+Time:        3.474 s
 Ran all test suites.
