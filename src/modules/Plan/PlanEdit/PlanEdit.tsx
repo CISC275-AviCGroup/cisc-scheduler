@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Form } from "react-bootstrap";
 import { Semester } from "../../../interfaces/semester";
 import { LocalCourse } from "../../../interfaces/LocalCourse";
 import "./PlanEdit.css";
@@ -155,6 +156,70 @@ export const EditSemesterModal = ({
                     {/* Existing Form and Course Display */}
                     <table>
                         <tbody>
+                            <Form>
+                                <Form.Group controlId="seasonSelect">
+                                    <Form.Label
+                                        style={{ paddingRight: "10px" }}
+                                    >
+                                        Select Season:{" "}
+                                    </Form.Label>
+                                    <Form.Check
+                                        inline
+                                        type="radio"
+                                        name="response"
+                                        onChange={(e) =>
+                                            setTitle(e.target.value)
+                                        }
+                                        id="Fall"
+                                        label="Fall"
+                                        value="Fall"
+                                        checked={title === "Fall"}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        type="radio"
+                                        name="response"
+                                        onChange={(e) =>
+                                            setTitle(e.target.value)
+                                        }
+                                        id="Winter"
+                                        label="Winter"
+                                        value="Winter"
+                                        checked={title === "Winter"}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        type="radio"
+                                        name="response"
+                                        onChange={(e) =>
+                                            setTitle(e.target.value)
+                                        }
+                                        id="Spring"
+                                        label="Spring"
+                                        value="Spring"
+                                        checked={title === "Spring"}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        type="radio"
+                                        name="response"
+                                        onChange={(e) =>
+                                            setTitle(e.target.value)
+                                        }
+                                        id="Summer"
+                                        label="Summer"
+                                        value="Summer"
+                                        checked={title === "Summer"}
+                                    />
+                                    <Form.Control
+                                        type="number"
+                                        value={year}
+                                        onChange={(
+                                            e: React.ChangeEvent<HTMLInputElement>
+                                        ) => setYear(e.target.value)}
+                                    />
+                                </Form.Group>
+                            </Form>
                             {courses.map((course, index) => (
                                 <tr key={index}>
                                     <td>{course.code}</td>
