@@ -11,17 +11,20 @@ interface EditSemesterModalProps {
     semester: Semester;
     show: boolean;
     handleClose: () => void;
+    saveChanges: (updatedSemester: Semester) => void;
 }
 
 export const EditSemesterModal = ({
     semester,
     show,
-    handleClose
+    handleClose,
+    saveChanges
 }: EditSemesterModalProps) => {
     const [title, setTitle] = useState<string>(semester.title);
     const [year, setYear] = useState<string>(semester.year);
     const [courses, setCourses] = useState<LocalCourse[]>(semester.courses);
     const [totCreds, setTotCreds] = useState<number>(0);
+    const [course, setCourse] = useState<string>("");
 
     const coreCsCourses = [
         {
@@ -141,7 +144,31 @@ export const EditSemesterModal = ({
         }
     ];
 
-    const [course, setCourse] = useState<string>("");
+    const removeCourse = (index: number) => {
+        const updatedCourses = [...courses];
+        updatedCourses.splice(index, 1);
+        setCourses(updatedCourses);
+    };
+
+    const handleSave = () => {
+        const totalCredits = courses.reduce(
+            (accumulator, course) => accumulator + course.credits,
+            0
+        );
+
+        setTotCreds(totalCredits);
+
+        const updatedSemester: Semester = {
+            title,
+            year,
+            courses,
+            tot_creds: totCreds
+        };
+
+        // Update the state of the Semester object using saveChanges function
+        saveChanges(updatedSemester);
+        handleClose(); // Close the modal after saving changes
+    };
 
     function updateSearch(event: React.ChangeEvent<HTMLInputElement>) {
         setCourse(event.target.value);
@@ -166,11 +193,6 @@ export const EditSemesterModal = ({
             setCourses([...courses, newCourse]);
         }
     };
-    const removeCourse = (index: number) => {
-        const updatedCourses = [...courses];
-        updatedCourses.splice(index, 1);
-        setCourses(updatedCourses);
-    };
 
     return (
         <div>
@@ -181,70 +203,6 @@ export const EditSemesterModal = ({
                     <h2>Course Table</h2>
                     <table>
                         <tbody>
-                            <Form>
-                                <Form.Group controlId="seasonSelect">
-                                    <Form.Label
-                                        style={{ paddingRight: "10px" }}
-                                    >
-                                        Select Season:{" "}
-                                    </Form.Label>
-                                    <Form.Check
-                                        inline
-                                        type="radio"
-                                        name="response"
-                                        onChange={(e) =>
-                                            setTitle(e.target.value)
-                                        }
-                                        id="Fall"
-                                        label="Fall"
-                                        value="Fall"
-                                        checked={title === "Fall"}
-                                    />
-                                    <Form.Check
-                                        inline
-                                        type="radio"
-                                        name="response"
-                                        onChange={(e) =>
-                                            setTitle(e.target.value)
-                                        }
-                                        id="Winter"
-                                        label="Winter"
-                                        value="Winter"
-                                        checked={title === "Winter"}
-                                    />
-                                    <Form.Check
-                                        inline
-                                        type="radio"
-                                        name="response"
-                                        onChange={(e) =>
-                                            setTitle(e.target.value)
-                                        }
-                                        id="Spring"
-                                        label="Spring"
-                                        value="Spring"
-                                        checked={title === "Spring"}
-                                    />
-                                    <Form.Check
-                                        inline
-                                        type="radio"
-                                        name="response"
-                                        onChange={(e) =>
-                                            setTitle(e.target.value)
-                                        }
-                                        id="Summer"
-                                        label="Summer"
-                                        value="Summer"
-                                        checked={title === "Summer"}
-                                    />
-                                    <Form.Control
-                                        type="number"
-                                        value={year}
-                                        onChange={(
-                                            e: React.ChangeEvent<HTMLInputElement>
-                                        ) => setYear(e.target.value)}
-                                    />
-                                </Form.Group>
-                            </Form>
                             <table>
                                 <thead>
                                     <tr>
@@ -274,8 +232,8 @@ export const EditSemesterModal = ({
                                                         semesterCourse.code ===
                                                         course.code
                                                 )
-                                                    ? "Taken"
-                                                    : "Not Taken"}
+                                                    ? "Taken ✅"
+                                                    : "Not Taken ❌"}
                                             </td>
                                         </tr>
                                     ))}
@@ -337,7 +295,14 @@ export const EditSemesterModal = ({
                         </div>
                     </div>
                 </Modal.Body>
-                {/* ... (modal footer) */}
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={() => handleSave()}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
             </Modal>
         </div>
     );

@@ -97,6 +97,32 @@ export const PlanExpanded = ({
             [semesterTitle]: false // Set the modal for the specified semester to false
         }));
     };
+
+    const handleSaveChanges = (
+        semesterTitle: string,
+        updatedSemester: Semester
+    ) => {
+        // Find the index of the semester to be updated
+        const semesterIndex = plan.semesters.findIndex(
+            (semester) => semester.title === semesterTitle
+        );
+
+        if (semesterIndex !== -1) {
+            // Create a new array with the updated semester
+            const updatedSemesters = [...plan.semesters];
+            updatedSemesters[semesterIndex] = updatedSemester;
+
+            // Update the plan with the modified semester
+            editPlan(plan.title, {
+                ...plan,
+                semesters: updatedSemesters
+            });
+
+            // Close the modal or perform any other necessary actions
+            handleEditcloseModal(semesterTitle);
+        }
+    };
+
     return (
         <>
             <button
@@ -203,6 +229,12 @@ export const PlanExpanded = ({
                                     }
                                     handleClose={() =>
                                         handleEditcloseModal(semester.title)
+                                    }
+                                    saveChanges={(updatedSemester: Semester) =>
+                                        handleSaveChanges(
+                                            semester.title,
+                                            updatedSemester
+                                        )
                                     }
                                 ></EditSemesterModal>
 
