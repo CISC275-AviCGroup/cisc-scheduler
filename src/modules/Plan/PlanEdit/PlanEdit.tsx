@@ -10,17 +10,19 @@ interface EditSemesterModalProps {
     semester: Semester;
     show: boolean;
     handleClose: () => void;
+    saveChanges: (updatedSemester: Semester) => void;
 }
 
 export const EditSemesterModal = ({
     semester,
     show,
-    handleClose
+    handleClose,
+    saveChanges
 }: EditSemesterModalProps) => {
     const [title, setTitle] = useState<string>(semester.title);
     const [year, setYear] = useState<string>(semester.year);
     const [courses, setCourses] = useState<LocalCourse[]>(semester.courses);
-    const [totCreds, setTotCreds] = useState<number>(0);
+    const [totCreds, setTotCreds] = useState<number>(semester.tot_creds);
 
     const coreCsCourses = [
         {
@@ -144,6 +146,26 @@ export const EditSemesterModal = ({
         const updatedCourses = [...courses];
         updatedCourses.splice(index, 1);
         setCourses(updatedCourses);
+    };
+
+    const handleSave = () => {
+        const totalCredits = courses.reduce(
+            (accumulator, course) => accumulator + course.credits,
+            0
+        );
+
+        setTotCreds(totalCredits);
+
+        const updatedSemester: Semester = {
+            title,
+            year,
+            courses,
+            tot_creds: totCreds
+        };
+
+        // Update the state of the Semester object using saveChanges function
+        saveChanges(updatedSemester);
+        handleClose(); // Close the modal after saving changes
     };
 
     return (
@@ -298,7 +320,9 @@ export const EditSemesterModal = ({
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary">Save Changes</Button>
+                    <Button variant="primary" onClick={() => handleSave()}>
+                        Save Changes
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </div>
