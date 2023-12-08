@@ -19,4 +19,9 @@
 .courseTable {
     border-color: gold;
     border-width: 1px;
+    width: 175px;
+}
+
+.w {
+    width: 200px;
 }
