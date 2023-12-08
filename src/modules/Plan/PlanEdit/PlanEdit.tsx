@@ -148,12 +148,20 @@ export const EditSemesterModal = ({
     }
 
     const courseAdder = () => {
-        if (!courses.some((semesterCourse) => semesterCourse.code === course)) {
+        // Search for the course in coreCsCourses
+        const foundCourse = coreCsCourses.find(
+            (coreCourse) => coreCourse.code === course
+        );
+
+        if (
+            foundCourse &&
+            !courses.some((semesterCourse) => semesterCourse.code === course)
+        ) {
             const newCourse: LocalCourse = {
-                credits: 0,
-                code: course,
-                prerequisites: [],
-                title: title // Use the current title state dynamically
+                credits: foundCourse.credits,
+                code: foundCourse.code,
+                prerequisites: foundCourse.prerequisites,
+                title: foundCourse.title
             };
             setCourses([...courses, newCourse]);
         }
