@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 import { Semester } from "../../../interfaces/semester";
 import { LocalCourse } from "../../../interfaces/LocalCourse";
+import "./PlanEdit.css";
 
 interface EditSemesterModalProps {
     semester: Semester;
